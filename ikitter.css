@@ -1,0 +1,73 @@
+body{               /*ページ全体のフォント指定*/
+  font-family: "Segoe UI", Arial, Meiryo, sans-serif;
+
+}
+
+#start_header{　　  /*ヘッダー部*/
+  height: 60px;
+  height: 60px;     /*2個書かないと認識しません死ね*/
+  width: auto;
+  background-color: #83ba3b;
+  font-size: 44px;
+  color: white;
+  font-weight: bold;
+}
+
+#start_image{       /*がぞうの比率指定*/
+  max-height: 560px;
+  width: 100%;
+}
+
+#main{
+  width: 100%;
+  height: 100%;
+}
+
+#start_position{    /*イキリオタクの表示位置指定*/
+  position:absolute;
+  top: 10%;
+  left: 5%;
+  color: white;
+  font-size: 68px;
+  font-weight: lighter;
+}
+
+#start2_position{   /*君の凄さを～の表示位置指定*/
+  position:absolute;
+  top: 25%;
+  left: 8%;
+  color: white;
+  font-size: 34px;
+  font-weight: lighter;
+}
+
+button{             /*ボタン透明*/
+  background-color: transparent;
+}
+
+#start3_position{　/*ボタンの表示位置指定*/
+  position:absolute;
+  top: 45%;
+  left: 12%;
+  color: white;
+  font-size: 34px;
+  font-weight: lighter;
+}
+
+/*
+*#start_position{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform : translate(-50%,-50%);
+  -webkits-transform : translate(-50%,-50%);
+  transform:  translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: bold;　
+  font-size: 2em;
+  top: 0;
+  left: 0;
+}
+*/
