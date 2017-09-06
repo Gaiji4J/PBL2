@@ -1,73 +1,77 @@
 body{               /*ページ全体のフォント指定*/
-  font-family: "Segoe UI", Arial, Meiryo, sans-serif;
-
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    margin:0;
 }
 
 #start_header{　　  /*ヘッダー部*/
-  height: 60px;
-  height: 60px;     /*2個書かないと認識しません死ね*/
+  height: 65px;
+  height: 65px;     /*2個書かないと認識しません死ね*/
   width: auto;
   background-color: #83ba3b;
-  font-size: 44px;
+  font-size: 54px;
   color: white;
   font-weight: bold;
 }
 
 #start_image{       /*がぞうの比率指定*/
-  max-height: 560px;
+  max-height: 85%;
   width: 100%;
 }
 
 #main{
+position: relative;
   width: 100%;
   height: 100%;
 }
 
 #start_position{    /*イキリオタクの表示位置指定*/
   position:absolute;
-  top: 10%;
-  left: 5%;
+  top: 13%;
+  left: 8%;
   color: white;
-  font-size: 68px;
+  font-size: 250%;
   font-weight: lighter;
 }
 
 #start2_position{   /*君の凄さを～の表示位置指定*/
   position:absolute;
-  top: 25%;
+  top: 21%;
   left: 8%;
-  color: white;
-  font-size: 34px;
+  color: #DDDDDD;
+  font-size: 130%;
   font-weight: lighter;
 }
 
-button{             /*ボタン透明*/
-  background-color: transparent;
-}
-
-#start3_position{　/*ボタンの表示位置指定*/
+#start_botan{ /*始めようボタン*/
   position:absolute;
-  top: 45%;
-  left: 12%;
-  color: white;
-  font-size: 34px;
-  font-weight: lighter;
+  top: 38%;
+  left: 13.5%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;/*余計な隙間を除く*/
+  font-size: 200%;/*文字サイズ*/
+  border:solid #83ba3b 2px; /*線で囲う*/
+  /*文字と線の間の余白*/
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  color: white;/*文字色*/
+  background-color: #83ba3b;
+  text-decoration: none;/*下線を表示させない*/
+/*丸角*/
+    -webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;  
+    -moz-border-radius-topright: 10px;  
+    -moz-border-radius-bottomright: 10px;  
+    -moz-border-radius-bottomleft: 10px; 
 }
 
-/*
-*#start_position{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform : translate(-50%,-50%);
-  -webkits-transform : translate(-50%,-50%);
-  transform:  translate(-50%,-50%);
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-weight: bold;　
-  font-size: 2em;
-  top: 0;
-  left: 0;
+#start_botan:hover{
+    background: #5A8028;
+    border:solid #5A8028 2px; /*線で囲う*/
 }
-*/
