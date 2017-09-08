@@ -77,12 +77,12 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-bottomleft: 0.5vw;
 }
 
-#start_botan:hover{
+#start_botan:hover{　/*マウスを重ねた時の動作*/
     background: #5A8028;
     border:solid #5A8028 2px; /*線で囲う*/
 }
 
-#start_header2{
+#start_header2{　/*緑のヘッダー*/
   z-index:1;
   position: fixed !important;
   position: absolute;
@@ -96,7 +96,7 @@ body{               /*ページ全体のフォント指定*/
   font-weight: bold;   
 }
 
-#login_botan{
+#login_botan{　/*右上のログインボタン*/
   z-index:1;
   position: fixed !important;
   position: absolute;
@@ -127,12 +127,12 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-bottomleft: 0.5vw;
 }
 
-#login_botan:hover{
+#login_botan:hover{　/*マウスを重ねた時の動作*/
     background: #75a735;
     border:solid #75a735 2px; /*線で囲う*/
 }
 
-#ikitter_log{
+#ikitter_log{　/*ロゴ*/
   z-index:1;
   width: 7vw;
   height: 2.5vw;
@@ -154,7 +154,7 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
 }
-#ikitter_log:hover{
-    background: #75a735;
+#ikitter_log:hover{/*マウスを重ねた時の動作*/
+    background: #75a735;　
     border:solid #75a735 2px; /*線で囲う*/
 }
