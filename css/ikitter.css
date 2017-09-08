@@ -8,7 +8,6 @@ body{               /*ページ全体のフォント指定*/
   height: 6%;     /*2個書かないと認識しません死ね*/
   width: auto;
   background-color: #83ba3b;
-  font-size: 54px;
   color: white;
   font-weight: bold;
 }
@@ -92,7 +91,69 @@ body{               /*ページ全体のフォント指定*/
   height: 6%;
   width: 100%;
   background-color: #83ba3b;
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: white;
-  font-weight: bold;
+  font-weight: bold;   
+}
+
+#login_botan{
+  z-index:1;
+  position:absolute;
+  top: 1.6vw;
+  left: 96%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;/*余計な隙間を除く*/
+  font-size: 1.5vw;/*文字サイズ*/
+  border:solid #83ba3b 0.2vw; /*線で囲う*/
+  /*文字と線の間の余白*/
+  padding-top: 0.025vw;
+  padding-bottom: 0.025vw;
+  padding-left:0.7vw;
+  padding-right:0.7vw;
+  color: white;/*文字色*/
+  background-color: #83ba3b;
+  text-decoration: none;/*下線を表示させない*/
+/*丸角*/
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#login_botan:hover{
+    background: #75a735;
+    border:solid #75a735 2px; /*線で囲う*/
+}
+
+#ikitter_log{
+  z-index:1;
+  width: 7vw;
+  height: 2.5vw;
+  position: fixed !important;
+  position: absolute;
+  top: 0.4vw;
+  left: 0.8vw;
+  font-size: 2.5vw;
+  color: white;
+  font-weight: bold;  
+  text-decoration: none; 
+
+ -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+#ikitter_log:hover{
+    background: #75a735;
+    border:solid #75a735 2px; /*線で囲う*/
 }
