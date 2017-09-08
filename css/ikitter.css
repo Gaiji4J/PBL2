@@ -4,8 +4,8 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_header{  /*ヘッダー部*/
-  height: 65px;
-  height: 65px;     /*2個書かないと認識しません死ね*/
+  height: 45px;
+  height: 45px;     /*2個書かないと認識しません死ね*/
   width: auto;
   background-color: #83ba3b;
   font-size: 54px;
@@ -89,11 +89,10 @@ body{               /*ページ全体のフォント指定*/
   position: absolute;
   top: 0;
   left: 0;
-  height: 65px;
-  height: 65px;     /*2個書かないと認識しません死ね*/
+  height: 45px;
   width: 100%;
   background-color: #83ba3b;
-  font-size: 54px;
+  font-size: 34px;
   color: white;
   font-weight: bold;
 }
