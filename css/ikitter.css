@@ -26,31 +26,31 @@ position: relative;
 
 #start_position{    /*イキリオタクの表示位置指定*/
   position:absolute;
-  top: 13%;
-  left: 8%;
+  top: 13vw;
+  left: 8vw;
   color: white;
-  font-size: 250%;
+  font-size: 4vw;
   font-weight: lighter;
 }
 
 #start2_position{   /*君の凄さを～の表示位置指定*/
   position:absolute;
-  top: 21%;
-  left: 8%;
+  top: 21vw;
+  left: 8vw;
   color: #DDDDDD;
-  font-size: 130%;
+  font-size: 2vw;
   font-weight: lighter;
 }
 
 #start_botan{ /*始めようボタン*/
   position:absolute;
-  top: 38%;
-  left: 13.5%;
+  top: 30vw;
+  left: 13.5vw;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   margin:0;/*余計な隙間を除く*/
-  font-size: 200%;/*文字サイズ*/
+  font-size: 3vw;/*文字サイズ*/
   border:solid #83ba3b 2px; /*線で囲う*/
   /*文字と線の間の余白*/
   padding-top: 0.125rem;
