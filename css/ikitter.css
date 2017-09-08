@@ -98,7 +98,8 @@ body{               /*ページ全体のフォント指定*/
 
 #login_botan{
   z-index:1;
-  position:absolute;
+  position: fixed !important;
+  position: absolute;
   top: 1.6vw;
   left: 96%;
   -ms-transform: translate(-50%,-50%);
