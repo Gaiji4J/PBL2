@@ -4,8 +4,8 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_header{  /*ヘッダー部*/
-  height: 45px;
-  height: 45px;     /*2個書かないと認識しません死ね*/
+  height: 6%;
+  height: 6%;     /*2個書かないと認識しません死ね*/
   width: auto;
   background-color: #83ba3b;
   font-size: 54px;
@@ -57,25 +57,25 @@ body{               /*ページ全体のフォント指定*/
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   margin:0;/*余計な隙間を除く*/
-  font-size: 3vw;/*文字サイズ*/
-  border:solid #83ba3b 2px; /*線で囲う*/
+  font-size: 2vw;/*文字サイズ*/
+  border:solid #83ba3b 0.2vw; /*線で囲う*/
   /*文字と線の間の余白*/
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-  padding-left:1rem;
-  padding-right:1rem;
+  padding-top: 0.025vw;
+  padding-bottom: 0.025vw;
+  padding-left:0.7vw;
+  padding-right:0.7vw;
   color: white;/*文字色*/
   background-color: #83ba3b;
   text-decoration: none;/*下線を表示させない*/
 /*丸角*/
-    -webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-webkit-border-bottom-right-radius: 10px;
-	-webkit-border-bottom-left-radius: 10px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-topright: 10px;
-    -moz-border-radius-bottomright: 10px;
-    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
 }
 
 #start_botan:hover{
@@ -89,10 +89,10 @@ body{               /*ページ全体のフォント指定*/
   position: absolute;
   top: 0;
   left: 0;
-  height: 45px;
+  height: 6%;
   width: 100%;
   background-color: #83ba3b;
-  font-size: 34px;
+  font-size: 3vw;
   color: white;
   font-weight: bold;
 }
