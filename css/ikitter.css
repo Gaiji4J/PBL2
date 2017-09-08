@@ -14,17 +14,22 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_image{       /*がぞうの比率指定*/
+   z-index:0;
   max-height: 85%;
   width: 100%;
 }
 
 #main{
-position: relative;
+  position: fixed !important;  
+  position: absolute;   
+  top: 0;  
+  left: 0; 
   width: 100%;
   height: 100%;
 }
 
 #start_position{    /*イキリオタクの表示位置指定*/
+  z-index:0;
   position:absolute;
   top: 13%;
   left: 8%;
@@ -34,6 +39,7 @@ position: relative;
 }
 
 #start2_position{   /*君の凄さを～の表示位置指定*/
+  z-index:0;
   position:absolute;
   top: 21%;
   left: 8%;
@@ -43,6 +49,7 @@ position: relative;
 }
 
 #start_botan{ /*始めようボタン*/
+  z-index:0;
   position:absolute;
   top: 38%;
   left: 13.5%;
@@ -74,4 +81,19 @@ position: relative;
 #start_botan:hover{
     background: #5A8028;
     border:solid #5A8028 2px; /*線で囲う*/
+}
+
+#start_header2{
+  z-index:1;
+  position: fixed !important;  
+  position: absolute;   
+  top: 0;  
+  left: 0; 
+  height: 65px;
+  height: 65px;     /*2個書かないと認識しません死ね*/
+  width: 100%;
+  background-color: #83ba3b;
+  font-size: 54px;
+  color: white;
+  font-weight: bold;
 }
