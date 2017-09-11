@@ -97,7 +97,7 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #login_botan{　/*右上のログインボタン*/
-  z-index:1;
+  z-index:2;
   position: fixed !important;
   position: absolute;
   top: 1.6vw;
@@ -114,7 +114,6 @@ body{               /*ページ全体のフォント指定*/
   padding-left:0.7vw;
   padding-right:0.7vw;
   color: white;/*文字色*/
-  background-color: #83ba3b;
   text-decoration: none;/*下線を表示させない*/
 /*丸角*/
     -webkit-border-top-left-radius: 0.5vw;
@@ -129,23 +128,29 @@ body{               /*ページ全体のフォント指定*/
 
 #login_botan:hover{　/*マウスを重ねた時の動作*/
     background: #75a735;
+    background: #75a735; /*2個書かないと反映されない不具合*/
     border:solid #75a735 2px; /*線で囲う*/
 }
 
 #ikitter_log{　/*ロゴ*/
-  z-index:1;
+  z-index:2;
   width: 7vw;
-  height: 2.5vw;
+  height: 2.59vw;
   position: fixed !important;
   position: absolute;
   top: 0.2vw;
-  left: 0.8vw;
+  left: 0.9vw;
   font-size: 2.5vw;
+
   color: white;
   font-weight: bold;  
   text-decoration: none; 
-
- -webkit-border-top-left-radius: 0.5vw;
+  /*文字と線の間の余白*/
+  padding-top: 0.025vw;
+  padding-bottom: 0.025vw;
+  padding-left:0.7vw;
+  padding-right:0.7vw;
+    -webkit-border-top-left-radius: 0.5vw;
 	-webkit-border-top-right-radius: 0.5vw;
 	-webkit-border-bottom-right-radius: 0.5vw;
 	-webkit-border-bottom-left-radius: 0.5vw;
