@@ -4,17 +4,18 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_header{  /*ヘッダー部*/
-  height: 3vw;
-  height: 3vw;     /*2個書かないと認識しません死ね*/
-  width: auto;
-  background-color: #83ba3b;
+  width: 90px;
+  height: 40.8px;
+  background-color: #2670A5;
   color: white;
   font-weight: bold;
 }
 
 #start_image{       /*がぞうの比率指定*/
-   z-index:0;
-  max-height: 85%;
+  z-index:2;
+  position: fixed !important;
+  position: absolute;
+  height: 85%;
   width: 100%;
 }
 
@@ -28,7 +29,7 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_position{    /*イキリオタクの表示位置指定*/
-  z-index:0;
+  z-index:2;
   position:absolute;
   top: 13vw;
   left: 8vw;
@@ -38,7 +39,7 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start2_position{   /*君の凄さを～の表示位置指定*/
-  z-index:0;
+  z-index:2;
   position:absolute;
   top: 21vw;
   left: 8vw;
@@ -48,7 +49,7 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_botan{ /*始めようボタン*/
-  z-index:0;
+  z-index:2;
   position:absolute;
   top: 30vw;
   left: 13.5vw;
@@ -57,14 +58,14 @@ body{               /*ページ全体のフォント指定*/
   transform: translate(-50%,-50%);
   margin:0;/*余計な隙間を除く*/
   font-size: 2vw;/*文字サイズ*/
-  border:solid #83ba3b 0.2vw; /*線で囲う*/
+  border:solid #83B93B 0.2vw; /*線で囲う*/
   /*文字と線の間の余白*/
   padding-top: 0.025vw;
   padding-bottom: 0.025vw;
   padding-left:0.7vw;
   padding-right:0.7vw;
   color: white;/*文字色*/
-  background-color: #83ba3b;
+  background-color: #83B93B;
   text-decoration: none;/*下線を表示させない*/
 /*丸角*/
     -webkit-border-top-left-radius: 0.5vw;
@@ -78,8 +79,9 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_botan:hover{　/*マウスを重ねた時の動作*/
-    background: #5A8028;
-    border:solid #5A8028 2px; /*線で囲う*/
+    background: #65902E;
+    background: #65902E;
+    border:solid #65902E 2px; /*線で囲う*/
 }
 
 #start_header2{　/*緑のヘッダー*/
@@ -88,9 +90,9 @@ body{               /*ページ全体のフォント指定*/
   position: absolute;
   top: 0;
   left: 0;
-  height: 3vw;
+  height:41px;
   width: 100%;
-  background-color: #83ba3b;
+  background-color: #83BA3B;
   font-size: 2.5vw;
   color: white;
   font-weight: bold;   
@@ -98,58 +100,58 @@ body{               /*ページ全体のフォント指定*/
 
 #login_botan{　/*右上のログインボタン*/
   z-index:2;
+  width: 90px;
+  height:40px;
   position: fixed !important;
   position: absolute;
-  top: 1.6vw;
-  left: 96%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;/*余計な隙間を除く*/
-  font-size: 1.5vw;/*文字サイズ*/
-  border:solid #83ba3b 0.2vw; /*線で囲う*/
-  /*文字と線の間の余白*/
-  padding-top: 0.025vw;
-  padding-bottom: 0.025vw;
-  padding-left:0.7vw;
-  padding-right:0.7vw;
-  color: white;/*文字色*/
-  text-decoration: none;/*下線を表示させない*/
-/*丸角*/
-    -webkit-border-top-left-radius: 0.5vw;
-	-webkit-border-top-right-radius: 0.5vw;
-	-webkit-border-bottom-right-radius: 0.5vw;
-	-webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
-}
-
-#login_botan:hover{　/*マウスを重ねた時の動作*/
-    background: #75a735;
-    background: #75a735; /*2個書かないと反映されない不具合*/
-    border:solid #75a735 2px; /*線で囲う*/
-}
-
-#ikitter_log{　/*ロゴ*/
-  z-index:2;
-  width: 7vw;
-  height: 2.59vw;
-  position: fixed !important;
-  position: absolute;
-  top: 0.2vw;
-  left: 0.9vw;
-  font-size: 2.5vw;
-
+  top: 0vw;
+  right:2%;
+  font-size: 22px;
   color: white;
   font-weight: bold;  
   text-decoration: none; 
   /*文字と線の間の余白*/
-  padding-top: 0.025vw;
-  padding-bottom: 0.025vw;
+  padding-top: 0.5vw;
   padding-left:0.7vw;
   padding-right:0.7vw;
+}
+
+#login_botan:hover{　/*マウスを重ねた時の動作*/
+    background: #65902E;
+    background: #65902E; /*2個書かないと反映されない不具合*/
+}
+
+#ikitter_log{　/*ロゴ*/
+  z-index:2;
+  width: 90px;
+  height:41px;
+  position: fixed !important;
+  position: absolute;
+  top: 0vw;
+  left: 0.9vw;
+  font-size: 34px;
+  color: white;
+  font-weight: bold;  
+  text-decoration: none; 
+  /*文字と線の間の余白*/
+  padding-left:0.7vw;
+  padding-right:0.7vw;
+}
+#ikitter_log:hover{/*マウスを重ねた時の動作*/
+    background: #65902E;　
+}
+
+
+#profile_space{
+    z-index:2;
+    position:  absolute;
+    top: 10vw;
+    left: 10vw;
+    width: 290px;
+    max-width: 300px;
+    height: 205px;
+     background-color: #ffffff;
+
     -webkit-border-top-left-radius: 0.5vw;
 	-webkit-border-top-right-radius: 0.5vw;
 	-webkit-border-bottom-right-radius: 0.5vw;
@@ -158,8 +160,4 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
-}
-#ikitter_log:hover{/*マウスを重ねた時の動作*/
-    background: #75a735;　
-    border:solid #75a735 2px; /*線で囲う*/
 }
