@@ -12,8 +12,7 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_image{       /*がぞうの比率指定*/
-  z-index:2;
-  position: fixed !important;
+  z-index:-1;
   position: absolute;
   height: 85%;
   width: 100%;
@@ -25,7 +24,7 @@ body{               /*ページ全体のフォント指定*/
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 9000px;
 }
 
 #start_position{    /*イキリオタクの表示位置指定*/
@@ -101,7 +100,7 @@ body{               /*ページ全体のフォント指定*/
 #login_botan{　/*右上のログインボタン*/
   z-index:2;
   width: 90px;
-  height:40px;
+  height:41px;
   position: fixed !important;
   position: absolute;
   top: 0vw;
@@ -111,9 +110,9 @@ body{               /*ページ全体のフォント指定*/
   font-weight: bold;  
   text-decoration: none; 
   /*文字と線の間の余白*/
-  padding-top: 0.5vw;
-  padding-left:0.7vw;
-  padding-right:0.7vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #login_botan:hover{　/*マウスを重ねた時の動作*/
@@ -123,7 +122,7 @@ body{               /*ページ全体のフォント指定*/
 
 #ikitter_log{　/*ロゴ*/
   z-index:2;
-  width: 90px;
+  width: 120px;
   height:41px;
   position: fixed !important;
   position: absolute;
@@ -134,8 +133,9 @@ body{               /*ページ全体のフォント指定*/
   font-weight: bold;  
   text-decoration: none; 
   /*文字と線の間の余白*/
-  padding-left:0.7vw;
-  padding-right:0.7vw;
+ 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #ikitter_log:hover{/*マウスを重ねた時の動作*/
     background: #65902E;　
@@ -143,14 +143,14 @@ body{               /*ページ全体のフォント指定*/
 
 
 #profile_space{
-    z-index:2;
-    position:  absolute;
-    top: 10vw;
-    left: 10vw;
-    width: 290px;
-    max-width: 300px;
-    height: 205px;
-     background-color: #ffffff;
+    z-index:-1;
+    position: fixed !important;
+    position: absolute;
+    top: 5vw;
+    left: 2vw;
+    width: 300px;
+    height: 400px;
+    background-color: #FAFAFA;
 
     -webkit-border-top-left-radius: 0.5vw;
 	-webkit-border-top-right-radius: 0.5vw;
@@ -160,4 +160,110 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#test{
+  
+  position: absolute;
+  z-index:-5;
+  width: 100%;
+  height:900000px;
+  background-color: gray;
+}
+
+#profile_backcolor{
+    z-index:-1;
+    position: fixed !important;
+    position: absolute;
+    top: 5vw;
+    left: 2vw;
+    width: 300px;
+    height: 40px;
+    background-color: #3BA2C2;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+}
+
+#login_font{
+    z-index:-1;
+    position: fixed !important;
+    position: absolute;
+    top: 5.5vw;
+    left: 3vw;
+    font-size: 22px;
+    color: white;
+    font-weight: bold; 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#id_input{
+  z-index:0;
+  position: fixed !important;
+  position: absolute; 
+  top: 9vw;
+  left: 3vw;
+  background: #FAFAFA;
+  border: none;
+  border-bottom: 2px solid #E9E9E9;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 30px;
+  transition: border-color 0.3s;
+  width: 270px;
+}
+
+#id_input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+#pass_input{
+  z-index:0;
+  position: fixed !important;
+  position: absolute; 
+  top: 12vw;
+  left: 3vw;
+  background: #FAFAFA;
+  border: none;
+  border-bottom: 2px solid #E9E9E9;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 30px;
+  transition: border-color 0.3s;
+  width: 270px;
+}
+
+#pass_input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+#login_Button{
+  z-index:0;
+  position: fixed !important;
+  position: absolute; 
+  top: 16vw;
+  left: 3vw;
+  background: #3BA2C2;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 270px;
+}
+
+#login_Button:hover {
+  background: #2f819b;
 }
