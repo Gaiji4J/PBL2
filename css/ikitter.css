@@ -1,7 +1,8 @@
 body{               /*ページ全体のフォント指定*/
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  font-family: "Yu Gothic";
     margin:0;
 }
+
 
 #start_header{  /*ヘッダー部*/
   width: 90px;
@@ -38,7 +39,7 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start2_position{   /*君の凄さを～の表示位置指定*/
-  z-index:2;
+  z-index:10;
   position:absolute;
   top: 21vw;
   left: 8vw;
@@ -84,7 +85,8 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #start_header2{　/*緑のヘッダー*/
-  z-index:1;
+  z-index:10;  /*２個書かないと反映されない死ね*/
+  z-index:10; 
   position: fixed !important;
   position: absolute;
   top: 0;
@@ -98,7 +100,8 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #login_botan{　/*右上のログインボタン*/
-  z-index:2;
+  z-index:11;/*２個書かないと反映されない死ね*/
+  z-index:11;    
   width: 90px;
   height:41px;
   position: fixed !important;
@@ -121,7 +124,8 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #ikitter_log{　/*ロゴ*/
-  z-index:2;
+  z-index:11;/*２個書かないと反映されない死ね*/
+  z-index:11;
   width: 120px;
   height:41px;
   position: fixed !important;
@@ -143,15 +147,14 @@ body{               /*ページ全体のフォント指定*/
 
 
 #profile_space{
-    z-index:-1;
+    z-index:10;
     position: fixed !important;
     position: absolute;
-    top: 5vw;
-    left: 2vw;
+    top: 68px;
+    left: 27px;
     width: 300px;
-    height: 400px;
+    height: 250px;
     background-color: #FAFAFA;
-
     -webkit-border-top-left-radius: 0.5vw;
 	-webkit-border-top-right-radius: 0.5vw;
 	-webkit-border-bottom-right-radius: 0.5vw;
@@ -160,7 +163,10 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
+    overflow:hidden;
 }
+
+
 
 #test{
   
@@ -175,8 +181,8 @@ body{               /*ページ全体のフォント指定*/
     z-index:-1;
     position: fixed !important;
     position: absolute;
-    top: 5vw;
-    left: 2vw;
+    top: 68px;
+    left: 27px;
     width: 300px;
     height: 40px;
     background-color: #3BA2C2;
@@ -190,22 +196,23 @@ body{               /*ページ全体のフォント指定*/
     z-index:-1;
     position: fixed !important;
     position: absolute;
-    top: 5.5vw;
-    left: 3vw;
+    top: 75px;
+    left: 44px;
     font-size: 22px;
     color: white;
     font-weight: bold; 
     display: flex;
 	align-items: center;
 	justify-content: center;
+    text-decoration: none; 
 }
 
 #id_input{
   z-index:0;
   position: fixed !important;
   position: absolute; 
-  top: 9vw;
-  left: 3vw;
+  top: 123px;
+  left: 41px;
   background: #FAFAFA;
   border: none;
   border-bottom: 2px solid #E9E9E9;
@@ -226,8 +233,8 @@ body{               /*ページ全体のフォント指定*/
   z-index:0;
   position: fixed !important;
   position: absolute; 
-  top: 12vw;
-  left: 3vw;
+  top: 164px;
+  left: 41px;
   background: #FAFAFA;
   border: none;
   border-bottom: 2px solid #E9E9E9;
@@ -248,8 +255,8 @@ body{               /*ページ全体のフォント指定*/
   z-index:0;
   position: fixed !important;
   position: absolute; 
-  top: 16vw;
-  left: 3vw;
+  top: 219px;
+  left: 41px;
   background: #3BA2C2;
   border: none;
   color: #fff;
@@ -266,4 +273,247 @@ body{               /*ページ全体のフォント指定*/
 
 #login_Button:hover {
   background: #2f819b;
+}
+
+#forgot_font{
+  z-index:0;
+  position: fixed !important;
+  position: absolute; 
+  top: 273px;
+  left: 41px;
+  font-size: 1em;
+  padding: 0.2em 0;
+  text-align: center;
+  color: #8c8c8c;
+  text-decoration: none;
+  transition: border-color 0.3s;
+  width: 270px;
+}
+
+#forgot_font:hover {
+  border-bottom: 1px dotted #8c8c8c;
+}
+
+#jtest{
+  z-index:7;
+  position: fixed !important;
+  position: absolute; 
+  top: 20vw;
+  left:30vw;
+}
+
+#jtest2{
+  z-index:7;
+  position: fixed !important;
+  position: absolute; 
+  top: 25vw;
+  left:30vw;
+}
+
+#pickup0{
+    z-index:-1;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 950px;
+    height: 500px;
+    background-color: #FAFAFA;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#pickup1{
+    z-index:-50;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 950px;
+    height: 500px;
+    background-color: blueviolet;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#pickup_menu_space{
+    z-index:4;
+    position: absolute;
+    top: 67px;
+    left: 1093px;
+    width: 200px;
+    height: 500px;
+    background-color: #373737;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    overflow:hidden;
+}
+
+#pickup_menu{
+    z-index:4;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 200px;
+    height: 600px;
+    background-color: red;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+}
+
+
+
+#pickup_top{
+    z-index:3;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 800px;
+    height: 40px;
+    background-color: 3BA2C2;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    font-size: 22px;
+    color: white;
+    font-weight: bold; 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#pick_img1{
+    z-index:3;
+    position: absolute;
+    top: 107px;
+    left: 341px;
+    width: 375px;
+    height: 120px;
+}
+
+#pick_icon1{
+    z-index:3;
+    position: absolute;
+    top: 161px;
+    left: 351px;
+    width: 65px;
+    height: 65px;
+    -webkit-border-top-left-radius: 1.3vw;
+	-webkit-border-top-right-radius: 1.3vw;
+	-webkit-border-bottom-right-radius: 1.3vw;
+	-webkit-border-bottom-left-radius: 1.3vw;
+    -moz-border-radius-topleft: 5vw;
+    -moz-border-radius-topright: 5vw;
+    -moz-border-radius-bottomright: 5vw;
+    -moz-border-radius-bottomleft: 5vw;
+}
+
+#pick_rank1{
+    z-index:3;
+    position: absolute;
+    top: 103px;
+    left: 353px;
+    width: 65px;
+    height: 65px;
+}
+
+#pick_bassfont1{
+    z-index:5;
+    position: absolute;
+    top: 110px;
+    left: 420px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold; 
+
+	justify-content: center;
+}
+
+#pick_Category1{
+    z-index:5;
+    position: absolute;
+    top: 110px;
+    left: 520px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold; 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#rank_id1{
+  z-index:5;
+  position: absolute; 
+  top: 165px;
+  left: 420px;
+  font-size: 20px;
+  height: 20px;
+  font-weight: bold; 
+  color: white;
+  transition: border-color 0.3s;
+  font-weight: bold; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+
+#rank_name1{
+    z-index:5;
+    position: absolute;
+    top: 135px;
+    left: 420px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold; 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#rank_score1{
+  z-index:5;
+  position: absolute; 
+  top: 195px;
+  left: 425px;
+  font-size: 32px;
+  height: 20px;
+  font-weight: bold; 
+  color: white;
+  transition: border-color 0.3s;
+  font-weight: bold; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-bottom: 3px solid white;
+  padding-bottom: 5px;
+}
+
+#rank_mask1{
+    z-index:4;
+    position: absolute;
+    top: 107px;
+    left: 416px;
+    width: 300px;
+    height: 120px;
+    background-color: rgba(0,0,0,0.2);
+
 }
