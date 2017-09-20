@@ -14,67 +14,29 @@
       <a href="test.html" id="login_botan">Login</a> <!--右上のログインボタン-->
       <img id="start_image" src="image\DSC_00042.jpg" /> <!--画像-->
      
- <!--個人プロフィール枠******************************************************************-->     　
+ <!--------------個人プロフィール枠------------>     　
     <div id="people_space"></div>
+<<<<<<< HEAD
     <img id="people_backcolor" src="image\aki1.jpg"/>
     <img id="people_icon" src="image\ico.jpg"/>
+=======
+    <img id="people_backcolor" src="image\aki.jpg"/>
+    <img class="people_icon" src="image\ico.jpg"/>
+>>>>>>> 2b10315785aa732a32493f4046cc269ebae8a784
     <p id="people_name">秋色紅茶</p>
     <p id="people_id">@akiirokoutya</p>
     <hr id="people_hr">
-    <p id="people_category">カテゴリ：Gaiji4J</p>
+    <p id="people_category">選択中のカテゴリ：Gaiji4J</p>
     
      
-  <!--ピックアップ\\\******************************************************************-->
-    <dvi id="pickup_menu_space">
-     <dvi id="pickup_menu"></dvi>  
-    </dvi>
-    <div id="pickup_top">PICK UP</div>
-    <div id="pickup0"></div>
-    <div id="pickup1"></div>
-    <p id="jtest">クリックしたアイテムのインデックス番号：<strong id="res"></strong></p>
-        <ul id="jtest2">
-           <li>インデックス０</li>
-           <li>インデックス１</li>
-        </ul>
- <!--1位-->
-    <img id="pick_img1" src="image\aki.jpg" /> <!--Profile背景画像1-->
-    <img id="pick_icon1" src="image\ico.jpg" /> <!--Profileアイコン画像1-->
-    <img id="pick_rank1" src="image\1.png" /> <!--Profileランキング画像1-->
-    <div id="pick_bassfont1">カテゴリ：</div>
-    <div id="pick_Category1">Gaiji4J</div>
-    <div id="rank_id1">@akiirokoutya</div>
-    <div id="rank_name1">秋色紅茶</div>
-    <div id="rank_score1">50000点</div>
-    <div id="rank_mask1"></div>
-  <!--ピックアップ******************************************************************-->     
-
-<!-- テストCODE -->    
-    
-          <script type="text/javascript">
-         $(function(){
-            $("li").click(function () {
-            var index=$("li").index(this);
-               $("#res").text(""+index+"").css("color","red");
-if(index==0){
-    $("#pickup0").css('z-index', 2);
-     $("#pickup1").css('z-index', -1);
-}else if(index==1){
-    $("#pickup0").css('z-index', -1);
-     $("#pickup1").css('z-index', 2);
-    
-}
-                
-                
-            });
-         });
-      </script>
-    
-    
-
-
-<!-- テストCODE / -->
-    
-    
+  <!-------------カテゴリ選択画面------------------>
+    <div id="category_top">カテゴリ</div>
+    <div id="category_back"></div>
+    <form  action="#" method="post">
+    <p id="category_p">登録したいカテゴリを入力してください。</p>
+  <input id=category_s type="search" name="search" placeholder="カテゴリを入力">
+  <input id="category_s_button" type="submit" name="submit" value="検索">
+</form>
     
  <main>    
  </main>
