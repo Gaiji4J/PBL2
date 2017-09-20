@@ -38,15 +38,26 @@
            <li>インデックス１</li>
         </ul>
  <!--1位-->
-    <img id="pick_img1" src="image\aki.jpg" /> <!--Profile背景画像1-->
-    <img id="pick_icon1" src="image\ico.jpg" /> <!--Profileアイコン画像1-->
-    <img id="pick_rank1" src="image\1.png" /> <!--Profileランキング画像1-->
-    <div id="pick_bassfont1">カテゴリ：</div>
-    <div id="pick_Category1">Gaiji4J</div>
-    <div id="rank_id1">@akiirokoutya</div>
-    <div id="rank_name1">秋色紅茶</div>
-    <div id="rank_score1">50000点</div>
-    <div id="rank_mask1"></div>
+
+    
+<!--test-->
+    <script>
+        t=107; //top 
+        l=341; //left
+        c=1;//img
+        for(i=1; i<=3; i++){ 
+             for(j=1; j<=2; j++){
+               document.write('<img class="pick_img" src="image/aki'+ c +'.jpg" style="position: absolute; left:'+ l + 'px; top:'+ t + 'px"/>');
+                 document.write('<img class="pick_icon" src="image/ico.jpg" />');
+                 
+                 l+=376;
+                 c++;
+             }
+            l=341;
+            t+=120;
+        }
+
+    </script>
   <!--ピックアップ******************************************************************-->     
 
 <!-- テストCODE -->    
