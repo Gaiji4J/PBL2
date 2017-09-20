@@ -6,15 +6,16 @@
      <title>Ikitter</title>
  </head>
 <body>
- 
-      <dvi id="test"></dvi>
+   <dvi>
+      <div id="test"></div>
       <header id="start_header">&nbsp;</header> <!--ヘッダーらしい-->
       <div id="start_header2"></div> <!--上のヘッダー-->
       <a href="home.html" id="ikitter_log">Ikitter</a><!--左上のロゴボタン-->  
       <a href="test.html" id="login_botan">Login</a> <!--右上のログインボタン-->
       <img id="start_image" src="image\DSC_00042.jpg" /> <!--画像-->
-     
- <!--プロフィール枠******************************************************************-->     
+   </dvi>     
+ <!--プロフィール枠**************************************u****************************-->   
+<dvi>
   <form action="" method="post" id="profile_space">　
      <div id="profile_backcolor"></div>
      <div id="login_font">Ikitterを始めよう！</div>
@@ -23,9 +24,11 @@
      <input type="submit" id="login_Button" value="LOGIN" />
      <p><a href="https://twitter.com/account/begin_password_reset" id="forgot_font">Forgot Twitter Account</a></p>
   </form>
+    </dvi>
 　<!--プロフィール枠******************************************************************-->    
      
   <!--ピックアップ******************************************************************-->
+    <dvi>
     <dvi id="pickup_menu_space">
      <dvi id="pickup_menu"></dvi>  
     </dvi>
@@ -37,24 +40,26 @@
            <li>インデックス０</li>
            <li>インデックス１</li>
         </ul>
+        </dvi>
  <!--1位-->
 
     
 <!--test-->
     <script>
-        t=107; //top 
-        l=341; //left
+        basstop=107; //top基本 
         c=1;//img
         for(i=1; i<=3; i++){ 
+            bassleft=341; //left基本
              for(j=1; j<=2; j++){
-               document.write('<img class="pick_img" src="image/aki'+ c +'.jpg" style="position: absolute; left:'+ l + 'px; top:'+ t + 'px"/>');
-                 document.write('<img class="pick_icon" src="image/ico.jpg" />');
-                 
-                 l+=376;
+               document.write('<img class="pick_img" src="image/aki'+ c +'.jpg" style="position: absolute; left:'+ bassleft + 'px; top:'+ basstop + 'px"/>');
+                 document.write('<img class="pick_icon" src="image/ico.jpg" style="position: absolute; left:'+ (bassleft+10-(-2*j)) + 'px; top:'+ (basstop+54)  + 'px" />');
+                 document.write('<img id="pick_rank1" src="image/'+ c +'.png" style="position: absolute; left:'+ (bassleft+12-(-1*j)) + 'px; top:'+ (basstop-4) + 'px" />');
+                 document.write(' <div id="pick_bassfont1" style="position: absolute; left:'+ bassleft + 'px; top:'+ basstop + 'px">カテゴリ：</div>')
+                 document.write('<div id="pick_Category1" >Gaiji4J</div>')
+                 bassleft+=376;
                  c++;
              }
-            l=341;
-            t+=120;
+            basstop+=120;
         }
 
     </script>

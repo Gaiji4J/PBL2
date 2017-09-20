@@ -3,7 +3,6 @@ body{               /*ページ全体のフォント指定*/
     margin:0;
 }
 
-
 #start_header{  /*ヘッダー部*/
   width: 90px;
   height: 40.8px;
@@ -77,7 +76,6 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
 }
-
 #start_botan:hover{　/*マウスを重ねた時の動作*/
     background: #65902E;
     background: #65902E;
@@ -117,7 +115,6 @@ body{               /*ページ全体のフォント指定*/
 	align-items: center;
 	justify-content: center;
 }
-
 #login_botan:hover{　/*マウスを重ねた時の動作*/
     background: #65902E;
     background: #65902E; /*2個書かないと反映されない不具合*/
@@ -145,7 +142,6 @@ body{               /*ページ全体のフォント指定*/
     background: #65902E;　
 }
 
-
 #profile_space{
     z-index:10;
     position: fixed !important;
@@ -165,8 +161,6 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-bottomleft: 0.5vw;
     overflow:hidden;
 }
-
-
 
 #test{
   
@@ -223,7 +217,6 @@ body{               /*ページ全体のフォント指定*/
   transition: border-color 0.3s;
   width: 270px;
 }
-
 #id_input:focus {
   border-bottom: 2px solid #c0c0c0;
   outline: none;
@@ -245,7 +238,6 @@ body{               /*ページ全体のフォント指定*/
   transition: border-color 0.3s;
   width: 270px;
 }
-
 #pass_input:focus {
   border-bottom: 2px solid #c0c0c0;
   outline: none;
@@ -270,7 +262,6 @@ body{               /*ページ全体のフォント指定*/
   transition: background 0.3s ease-in-out;
   width: 270px;
 }
-
 #login_Button:hover {
   background: #2f819b;
 }
@@ -289,7 +280,6 @@ body{               /*ページ全体のフォント指定*/
   transition: border-color 0.3s;
   width: 270px;
 }
-
 #forgot_font:hover {
   border-bottom: 1px dotted #8c8c8c;
 }
@@ -374,8 +364,6 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
 }
-
-
 
 #pickup_top{
     z-index:3;
