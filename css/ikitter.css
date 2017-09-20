@@ -173,29 +173,31 @@ body{               /*ページ全体のフォント指定*/
     top: 68px;
     left: 27px;
     width: 301px;
-    height: 91px;
-    background-color: #3BA2C2;
-    -webkit-border-top-left-radius: 0.5vw;
-	-webkit-border-top-right-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-}
-
-#people_space{
-    z-index:-1;
-    position: fixed !important;
-    position: absolute;
-    top: 68px;
-    left: 27px;
-    width: 301px;
-    height: 261px;
-    background-color: #FAFAFA;
+    height: 201px;
     -webkit-border-top-left-radius: 0.5vw;
 	-webkit-border-top-right-radius: 0.5vw;
 	-webkit-border-bottom-right-radius: 0.5vw;
 	-webkit-border-bottom-left-radius: 0.5vw;
     -moz-border-radius-topleft: 0.5vw;
     -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+    overflow:hidden;
+}
+
+#people_space{
+    z-index:1;
+    position: fixed !important;
+    position: absolute;
+    top: 155px;
+    left: 27px;
+    width: 301px;
+    height: 114px;
+    background-color: rgba(0,0,0,0.3);;
+
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
     overflow:hidden;
@@ -207,15 +209,16 @@ body{               /*ページ全体のフォント指定*/
 
 .people_icon{
     z-index:3;
-    position: absolute;
-    top: 130px;
-    left: 70px;
+  position: fixed !important;
+  position: absolute; 
+    top: 120px;
+    left: 65px;
     width: 81px;
     height: 81px;
-    -webkit-border-top-left-radius: 1.3vw;
-	-webkit-border-top-right-radius: 1.3vw;
-	-webkit-border-bottom-right-radius: 1.3vw;
-	-webkit-border-bottom-left-radius: 1.3vw;
+    -webkit-border-top-left-radius: 5vw;
+	-webkit-border-top-right-radius: 5vw;
+	-webkit-border-bottom-right-radius: 5vw;
+	-webkit-border-bottom-left-radius: 5vw;
     -moz-border-radius-topleft: 5vw;
     -moz-border-radius-topright: 5vw;
     -moz-border-radius-bottomright: 5vw;
@@ -224,64 +227,132 @@ body{               /*ページ全体のフォント指定*/
 }
 
 #people_name{
-  z-index:0;
+  z-index:1;
   position: fixed !important;
   position: absolute; 
-  top: 143px;
+  top: 133px;
   left: 81px;
   font-size: 1.5em;
+  font-weight: bold;
   padding: 0.2em 0;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   transition: border-color 0.3s;
   width: 270px;
 }
 
 #people_id{
-  z-index:0;
+  z-index:1;
   position: fixed !important;
   position: absolute; 
-  top: 183px;
+  top: 169px;
   left: 101px;
   font-size: 1.3em;
   padding: 0.2em 0;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
+  font-weight: bold;
   text-decoration: none;
   transition: border-color 0.3s;
   width: 270px;
 }
 
 #people_hr{
-     z-index:0;
+     z-index:1;
   position: fixed !important;
   position: absolute; 
-  top: 263px;
+  top: 221px;
   left: 27px;
   font-size: 1.3em;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   transition: border-color 0.3s;
   width: 299px;
 }
 
 #people_category{
-  z-index:0;
+  z-index:1;
   position: fixed !important;
   position: absolute; 
-  top: 263px;
+  top: 209px;
   left: 41px;
   font-size: 1.3em;
   padding: 0.2em 0;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
+  font-weight: bold;
   text-decoration: none;
   transition: border-color 0.3s;
   width: 270px; 
 }
-/*--------------------------↑ログイン後プロフィール↑-------------------------------*/
+/*--------------------------↓カテゴリ選択画面↓-------------------------------*/
+#category_top{
+    z-index:3;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 800px;
+    height: 40px;
+    background-color: 3BA2C2;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    font-size: 24px;
+    color: white;
+    font-weight: bold; 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#category_back{
+    z-index:-1;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 800px;
+    height: 500px;
+    background-color: #FAFAFA;
+    -webkit-border-top-left-radius: 0.5vw;
+	-webkit-border-top-right-radius: 0.5vw;
+	-webkit-border-bottom-right-radius: 0.5vw;
+	-webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#category_p{
+    z-index:3;
+    position: absolute;
+    top: 100px;
+    left: 361px;
+
+}
+
+#category_s{
+    z-index:3;
+    position: absolute;
+    top: 145px;
+    left: 361px;
+    width: 350px;
+    height: 40px;
+}
+
+#category_s_button{
+        z-index:3;
+    position: absolute;
+    top: 145px;
+    left: 621px;
+    width: 100px;
+    height: 40px;
+}
+
 #test{
   
   position: absolute;
