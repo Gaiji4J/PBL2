@@ -202,11 +202,24 @@ body{               /*ページ全体のフォント指定*/
 }　
 
 .people_icon{
+    
+}
+
+.people_icon{
     z-index:3;
-    position: fixed !important;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    top: 130px;
+    left: 70px;
+    width: 81px;
+    height: 81px;
+    -webkit-border-top-left-radius: 1.3vw;
+	-webkit-border-top-right-radius: 1.3vw;
+	-webkit-border-bottom-right-radius: 1.3vw;
+	-webkit-border-bottom-left-radius: 1.3vw;
+    -moz-border-radius-topleft: 5vw;
+    -moz-border-radius-topright: 5vw;
+    -moz-border-radius-bottomright: 5vw;
+    -moz-border-radius-bottomleft: 5vw;
     
 }
 
