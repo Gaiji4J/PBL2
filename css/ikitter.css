@@ -194,7 +194,7 @@ body{               /*ページ全体のフォント指定*/
     left: 27px;
     width: 301px;
     height: 114px;
-    background-color: rgba(0,0,0,0.3);;
+    background-color: rgba(0,0,0,0.03);
 
 	-webkit-border-bottom-right-radius: 0.5vw;
 	-webkit-border-bottom-left-radius: 0.5vw;
@@ -241,6 +241,7 @@ body{               /*ページ全体のフォント指定*/
   text-decoration: none;
   transition: border-color 0.3s;
   width: 270px;
+  text-shadow: 1px 1px 5px #3D3D3D;
 }
 
 #people_id{
@@ -257,6 +258,7 @@ body{               /*ページ全体のフォント指定*/
   text-decoration: none;
   transition: border-color 0.3s;
   width: 270px;
+  text-shadow: 1px 1px 5px #3D3D3D;
 }
 
 #people_hr{
@@ -287,6 +289,7 @@ body{               /*ページ全体のフォント指定*/
   text-decoration: none;
   transition: border-color 0.3s;
   width: 270px; 
+  text-shadow: 1px 1px 5px #3D3D3D;
 }
 /*--------------------------↓カテゴリ選択画面↓-------------------------------*/
 #category_top{
