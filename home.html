@@ -15,16 +15,14 @@
       <img id="start_image" src="image\DSC_00042.jpg" /> <!--画像-->
    </dvi>     
  <!--プロフィール枠**************************************u****************************-->   
-<dvi>
-  <form action="" method="post" id="profile_space">　
+  <div id="profile_space">　
      <div id="profile_backcolor"></div>
      <div id="login_font">Ikitterを始めよう！</div>
      <input type="text" id="id_input" required="required" placeholder="Twitter ID" />
      <input type="password" id="pass_input" required="required" placeholder="Twitter PASS" />
      <input type="submit" id="login_Button" value="LOGIN" />
      <p><a href="https://twitter.com/account/begin_password_reset" id="forgot_font">Forgot Twitter Account</a></p>
-  </form>
-    </dvi>
+  </div>
 　<!--プロフィール枠******************************************************************-->    
      
   <!--ピックアップ******************************************************************-->
@@ -51,18 +49,19 @@
         for(i=1; i<=3; i++){ 
             bassleft=341; //left基本
              for(j=1; j<=2; j++){
-               document.write('<img class="pick_img" src="image/aki'+ c +'.jpg" style="position: absolute; left:'+ bassleft + 'px; top:'+ basstop + 'px"/>');
+               document.write('<img class="pick_img" src="image/aki'+ c +'.jpg" style="position: absolute; left:'+ bassleft + 'px; top:'+ basstop + 'px">');
                  document.write('<img class="pick_icon" src="image/ico.jpg" style="position: absolute; left:'+ (bassleft+10-(-2*j)) + 'px; top:'+ (basstop+54)  + 'px" />');
                  document.write('<img class="pick_rank" src="image/'+ c +'.png" style="position: absolute; left:'+ (bassleft+12-(-1*j)) + 'px; top:'+ (basstop-4) + 'px" />');
                  document.write(' <div class="pick_bassfont" style="position: absolute; left:'+ (bassleft+79-(-1*j)) + 'px; top:'+ (basstop+3) + 'px">カテゴリ：</div>')
                  document.write('<div class="pick_Category" style="position: absolute; left:'+ (bassleft+179-(-1*j)) + 'px; top:'+ (basstop+3) + 'px" >Gaiji4J</div>')
-                 document.write('<div class="rank_id" style="position: absolute; left:'+ (bassleft+79-(-1*j)) + 'px; top:'+ (basstop+58) + 'px">@akiirokoutya</div>')
+                 document.write('<div class="rank_id" style="position: absolute; left:'+ (bassleft+79-(-1*j)) + 'px; top:'+ (basstop+53) + 'px">@akiirokoutya</div>')
                  document.write(' <div class="rank_name" style="position: absolute; left:'+ (bassleft+79-(-1*j)) + 'px; top:'+ (basstop+28) + 'px">秋色紅茶</div>')
-                 document.write('<div class="rank_score" style="position: absolute; left:'+ (bassleft+84-(-6*j)) + 'px; top:'+ (basstop+88) + 'px">50000点</div>')
+                 document.write('<div class="rank_score" style="position: absolute; left:'+ (bassleft+84-(-6*j)) + 'px; top:'+ (basstop+73) + 'px">50000点</div>')
                  document.write('<div class="rank_mask" style="position: absolute; left:'+ (bassleft+75-(-1*j)) + 'px; top:'+ (basstop+7) + 'px"></div>')
                  document.write(' <div class="rank_linkmask"  style="position: absolute; left:'+ bassleft + 'px; top:'+ (basstop) + 'px"><a href="https://twitter.com/akiirokoutya" class="a_link"></a></div>')
                  bassleft+=376;
                  c++;
+                 document.write('</img>')
              }
             basstop+=120;
         }
