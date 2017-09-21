@@ -807,10 +807,11 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
+    
 }
 
 #pickup1{
-    z-index:-50;
+    z-index:-2;
     position: absolute;
     top: 67px;
     left: 341px;
