@@ -868,7 +868,20 @@ body {
     -moz-border-radius-bottomright: 0.5vw;
 }
 
-#pickup_menu_space_mask {}
+#pickup_menu_space_mask{
+    z-index: 4;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 198px;
+    height: 498px;
+    overflow: hidden;
+    background-color: #ffffff;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+}
 
 #pickup_menu {
     z-index: 4;
@@ -1138,3 +1151,4 @@ body {
     /*マウスを重ねた時の動作*/
     background: #2f2f2f;
 }
+
