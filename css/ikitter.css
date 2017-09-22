@@ -884,7 +884,7 @@ body {
     -moz-border-radius-bottomright: 0.5vw;
 }
 
-#pickup_top {
+#pickup_top{
     z-index: 3;
     position: absolute;
     top: 67px;
