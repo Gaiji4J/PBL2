@@ -843,6 +843,10 @@ body{               /*ページ全体のフォント指定*/
     -moz-border-radius-bottomright: 0.5vw;
 }
 
+#pickup_menu_space_mask{
+    
+}
+
 #pickup_menu{
     z-index:4;
     position: absolute;
