@@ -1152,3 +1152,108 @@ body {
     background: #2f2f2f;
 }
 
+/*-----------------------about(Ikittr紹介ページ)--------------------------------*/
+#about_header {
+    /*黒ヘッダー部*/
+    width: 100%;
+    height: 150.8px;
+    background-color: #373737;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+#about_back {
+    z-index: -1;
+    position:fixed;
+    top: 150px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #eceeee;
+}
+
+#about_position {
+    /*Ikitterについて～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 1vw;
+    left:35vw;
+    color: white;
+    font-size: 4vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position2 {
+    /*概要～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 12vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position3 {
+    /*Twitterを愛し～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 15.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+
+#about_position4 {
+    /*カテゴリ～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 23vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position5 {
+    /*上位になれば～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 26.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position6 {
+    /*企業～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 32vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position7 {
+    /*世界中の～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 35.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
