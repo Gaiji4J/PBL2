@@ -1055,14 +1055,25 @@ body {
 
 /*------------------フッター--------------------------------------*/
 
-
+#start_footer {
+    /*フッター部*/
+    position: fixed !important;
+    position: absolute;
+    top: 660;
+    left: 0;
+    width: 90px;
+    height: 40.8px;
+    background-color: #373737;
+    color: white;
+    font-weight: bold;
+}
 
 #start_footer2 {
     /*フッター*/
     z-index: 10;
     position: fixed !important;
     position: absolute;
-    bottom: 0   ;
+    top: 91%;
     left: 0;
     height: 69px;
     width: 100%;
@@ -1141,7 +1152,7 @@ body {
     background: #2f2f2f;
 }
 
-/*-----------------------紹介ページ全般--------------------------------*/
+/*-----------------------about(Ikittr紹介ページ)--------------------------------*/
 #about_header {
     /*黒ヘッダー部*/
     width: 100%;
@@ -1152,16 +1163,102 @@ body {
     position: absolute;
 }
 
-#ab_back {
+#about_back {
     z-index: -1;
     position:fixed;
-    top: 0px;
+    top: 130px;
     left: 0px;
     width: 100%;
     height: 100%;
     background-color: #eceeee;
 }
 
+#about_position {
+    /*Ikitterについて～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 0.4vw;
+    left:36vw;
+    color: white;
+    font-size: 4vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position2 {
+    /*概要～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 12vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position3 {
+    /*Twitterを愛し～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 15.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+
+#about_position4 {
+    /*カテゴリ～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 23vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position5 {
+    /*上位になれば～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 26.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position6 {
+    /*企業～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 32vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#about_position7 {
+    /*世界中の～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 35.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+/*-----------------------advertiser（広告主への説明ページ）--------------------------------*/
 #ad_header {
     /*黒ヘッダー部*/
     width: 100%;
@@ -1182,35 +1279,90 @@ body {
     background-color: #eceeee;
 }
 
-#topdai {
+#ad_position {
+    /*Ikitterについて～の表示位置指定*/
     z-index: 10;
-    position: relative;
-    top: 0.1em;
-    left: 9em;
+    position: absolute;
+    top: 0.4vw;
+    left:36vw;
     color: white;
-    font-size: 50px;
+    font-size: 4vw;
     font-weight: lighter;
     font-weight: bold;
 }
 
-#dai {
-    z-index: 11;
-    position: fixed;
+#ad_position2 {
+    /*概要～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 12vw;
+    left: 8vw;
     color: #3ba2c2;
-    font-size: 30px;
+    font-size: 2vw;
     font-weight: lighter;
     font-weight: bold;
 }
 
-#naka {
-    z-index: 11;
-    position: fixed;
+#ad_position3 {
+    /*Ikitterのランキング～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 15.5vw;
+    left: 8vw;
     color: #666;
-    font-size: 19px;
+    font-size: 1.5vw;
     font-weight: lighter;
     font-weight: bold;
 }
 
+
+#ad_position4 {
+    /*こんな方に～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 22vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#ad_position5 {
+    /*上位になれば～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 25.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#ad_position6 {
+    /*企業～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 34vw;
+    left: 8vw;
+    color: #3ba2c2;
+    font-size: 2vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#ad_position7 {
+    /*世界中の～の表示位置指定*/
+    z-index: 10;
+    position: absolute;
+    top: 37.5vw;
+    left: 8vw;
+    color: #666;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-weight: bold;
+}
     
 /*---------Twitterシェアボタン-----------------*/
 #share-button{
