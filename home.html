@@ -7,6 +7,7 @@
     <title>Ikitter</title>
 </head>
 
+
 <body>
     <dvi>
         <div id="test"></div>
@@ -39,6 +40,8 @@
             <dvi id="pickup_menu_space_mask">
                 <dvi id="pickup_menu">
                     <ul class="list_ui">
+                        <script>
+                        </script>
                         <li class="Category_list">Gaiji4J</li>
                         <li class="Category_list">アニメ</li>
                         <li class="Category_list">ゲーム</li>
@@ -53,6 +56,8 @@
                         <li class="Category_list">キチガイ</li>
                         <li class="Category_list">フレンズ</li>
                         <li class="Category_list">アライさん</li>
+
+
                     </ul>
                 </dvi>
             </dvi>
@@ -71,7 +76,7 @@
         aki = 0;
         var size = $('.Category_list').length;
         for (d = 0; d <= size; d++) {
-            document.write('<div id="pickup' + d + '" class="pickup" style="position: absolute;top: 67px;left: 341px;width: 950px;height: 460px; z-index: ' + (1 - d) + '; background-color: #373737;> ');
+            document.write('<div id="pickup' + d + '" class="pickup" style="position: absolute;top: 67px;left: 341px;width: 950px;height: 460px; z-index: ' + (1 - d) + '; background-color: #3BA2C2;> ');
             basstop = 40; //top基本 
             c = 1; //img
             for (i = 1; i <= 3; i++) {
