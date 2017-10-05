@@ -62,7 +62,7 @@
             session.setAttribute("provider", provider);
 
             //ログインURL生成
-            String callbackUri = "http://localhost:8080/gaiji4j/logintest.jsp";
+            String callbackUri = request.getRequestURL().toString();
 //            String authUrl = null;
             try {
                 authUrl = provider.retrieveRequestToken(consumer, callbackUri);
@@ -94,6 +94,7 @@
     <dl>
         <dt>user_id</dt><dd><%=user != null ? user.getScreenName() : null%></dd>
     </dl>
+    <input type="button" value="Logout" onclick="location.href='logout.jsp'"/>
 </body>
 
 <%  //そうでない場合
