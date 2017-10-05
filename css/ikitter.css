@@ -17,7 +17,7 @@ body {
     /*がぞうの比率指定*/
     z-index: -1;
     position: absolute;
-    height: 85%;
+    height: 100%;
     width: 100%;
 }
 
@@ -801,6 +801,24 @@ body {
     border-bottom: 1px dotted #8c8c8c;
 }
 
+.Category_list {
+    width: 180px;
+    height: 32px;
+    font-size: 22px;
+    padding: 0.2em 0;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    overflow: hidden;
+    border-bottom: inset 1px #ffffff;
+}
+
+/*
+.Category_list:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}*/
+
 #jtest {
     z-index: 7;
     position: fixed !important;
@@ -817,14 +835,7 @@ body {
     left: 30vw;
 }
 
-#pickup0 {
-    z-index: -1;
-    position: absolute;
-    top: 67px;
-    left: 341px;
-    width: 950px;
-    height: 500px;
-    background-color: #FAFAFA;
+#pickup {
     -webkit-border-top-left-radius: 0.5vw;
     -webkit-border-top-right-radius: 0.5vw;
     -webkit-border-bottom-right-radius: 0.5vw;
@@ -835,14 +846,7 @@ body {
     -moz-border-radius-bottomleft: 0.5vw;
 }
 
-#pickup1 {
-    z-index: -2;
-    position: absolute;
-    top: 67px;
-    left: 341px;
-    width: 950px;
-    height: 500px;
-    background-color: blueviolet;
+.pickup {
     -webkit-border-top-left-radius: 0.5vw;
     -webkit-border-top-right-radius: 0.5vw;
     -webkit-border-bottom-right-radius: 0.5vw;
@@ -852,6 +856,8 @@ body {
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
 }
+
+
 
 #pickup_menu_space {
     z-index: 4;
@@ -859,16 +865,16 @@ body {
     top: 67px;
     left: 1093px;
     width: 200px;
-    height: 500px;
+    height: 460px;
     overflow: hidden;
-    background-color: #373737;
+    background-color: #757575;
     -webkit-border-top-right-radius: 0.5vw;
     -webkit-border-bottom-right-radius: 0.5vw;
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
 }
 
-#pickup_menu_space_mask{
+#pickup_menu_space_mask {
     z-index: 4;
     position: absolute;
     top: 1px;
@@ -876,7 +882,7 @@ body {
     width: 198px;
     height: 498px;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #3BA2C2;
     -webkit-border-top-right-radius: 0.5vw;
     -webkit-border-bottom-right-radius: 0.5vw;
     -moz-border-radius-topright: 0.5vw;
@@ -886,18 +892,23 @@ body {
 #pickup_menu {
     z-index: 4;
     position: absolute;
-    top: 50px;
+    top: 0px;
     left: 0px;
-    width: 200px;
+    width: 198px;
     height: 600px;
-    background-color: red;
+    background-color: #3BA2C2;
     -webkit-border-top-right-radius: 0.5vw;
     -webkit-border-bottom-right-radius: 0.5vw;
     -moz-border-radius-topright: 0.5vw;
     -moz-border-radius-bottomright: 0.5vw;
 }
 
-#pickup_top{
+.list_ui {
+    margin: 0 0 0 6.5;
+    padding: 0;
+}
+
+#pickup_top {
     z-index: 3;
     position: absolute;
     top: 67px;
@@ -921,7 +932,6 @@ body {
     z-index: 3;
     width: 376px;
     height: 120px;
-    overflow: hidden;
 }
 
 .pick_icon {
@@ -951,7 +961,6 @@ body {
     position: absolute;
     width: 100px;
     height: 30px;
-    overflow: hidden;
     font-size: 20px;
     color: FAFAFA;
     font-weight: bold;
@@ -964,7 +973,6 @@ body {
     position: absolute;
     width: 200px;
     height: 30px;
-    overflow: hidden;
     font-size: 20px;
     color: FAFAFA;
     font-weight: bold;
@@ -976,7 +984,6 @@ body {
     position: absolute;
     width: 300px;
     height: 30px;
-    overflow: hidden;
     font-size: 20px;
     font-weight: bold;
     color: FAFAFA;
@@ -991,7 +998,6 @@ body {
     position: absolute;
     width: 300px;
     height: 30px;
-    overflow: hidden;
     font-size: 20px;
     color: FAFAFA;
     font-weight: bold;
@@ -1003,7 +1009,6 @@ body {
     position: absolute;
     width: 270px;
     height: 35px;
-    overflow: hidden;
     font-size: 32px;
     color: FAFAFA;
     transition: border-color 0.3s;
@@ -1055,32 +1060,15 @@ body {
 
 /*------------------フッター--------------------------------------*/
 
-#start_footer {
-    /*フッター部*/
-    position: fixed !important;
-    position: absolute;
-    top: 660;
-    left: 0;
-    width: 90px;
-    height: 40.8px;
-    background-color: #373737;
-    color: white;
-    font-weight: bold;
-}
-
 #start_footer2 {
-    /*フッター*/
     z-index: 10;
     position: fixed !important;
     position: absolute;
     top: 91%;
     left: 0;
-    height: 69px;
+    height: 9%;
     width: 100%;
     background-color: #373737;
-    font-size: 2.5vw;
-    color: white;
-    font-weight: bold;
 }
 
 #top_link {
@@ -1152,7 +1140,9 @@ body {
     background: #2f2f2f;
 }
 
+
 /*-----------------------about(Ikittr紹介ページ)--------------------------------*/
+
 #about_header {
     /*黒ヘッダー部*/
     width: 100%;
@@ -1165,7 +1155,7 @@ body {
 
 #about_back {
     z-index: -1;
-    position:fixed;
+    position: fixed;
     top: 130px;
     left: 0px;
     width: 100%;
@@ -1178,7 +1168,7 @@ body {
     z-index: 10;
     position: absolute;
     top: 0.4vw;
-    left:36vw;
+    left: 36vw;
     color: white;
     font-size: 4vw;
     font-weight: lighter;
@@ -1208,7 +1198,6 @@ body {
     font-weight: lighter;
     font-weight: bold;
 }
-
 
 #about_position4 {
     /*カテゴリ～の表示位置指定*/
@@ -1258,7 +1247,9 @@ body {
     font-weight: bold;
 }
 
+
 /*-----------------------advertiser（広告主への説明ページ）--------------------------------*/
+
 #ad_header {
     /*黒ヘッダー部*/
     width: 100%;
@@ -1271,7 +1262,7 @@ body {
 
 #ad_back {
     z-index: -1;
-    position:fixed;
+    position: fixed;
     top: 130px;
     left: 0px;
     width: 100%;
@@ -1284,7 +1275,7 @@ body {
     z-index: 10;
     position: absolute;
     top: 0.4vw;
-    left:36vw;
+    left: 36vw;
     color: white;
     font-size: 4vw;
     font-weight: lighter;
@@ -1314,7 +1305,6 @@ body {
     font-weight: lighter;
     font-weight: bold;
 }
-
 
 #ad_position4 {
     /*こんな方に～の表示位置指定*/
@@ -1363,10 +1353,12 @@ body {
     font-weight: lighter;
     font-weight: bold;
 }
-    
+
+
 /*---------Twitterシェアボタン-----------------*/
-#share-button{
-     z-index: 10;
+
+#share-button {
+    z-index: 10;
     position: fixed;
     top: 49vw;
     left: 90vw;

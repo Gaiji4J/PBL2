@@ -36,10 +36,28 @@
     <div id="pickup_top">PICK UP</div>
     <dvi>
         <dvi id="pickup_menu_space">
-            <dvi id="pickup_menu_space_mask"/>
-            <dvi id="pickup_menu"></dvi>
+            <dvi id="pickup_menu_space_mask">
+                <dvi id="pickup_menu">
+                    <ul class="list_ui">
+                        <li class="Category_list">Gaiji4J</li>
+                        <li class="Category_list">アニメ</li>
+                        <li class="Category_list">ゲーム</li>
+                        <li class="Category_list">ツイ廃</li>
+                        <li class="Category_list">可愛い</li>
+                        <li class="Category_list">グルメ</li>
+                        <li class="Category_list">野球</li>
+                        <li class="Category_list">動物</li>
+                        <li class="Category_list">おしゃれ</li>
+                        <li class="Category_list">YouTuber</li>
+                        <li class="Category_list">イラスト</li>
+                        <li class="Category_list">キチガイ</li>
+                        <li class="Category_list">フレンズ</li>
+                        <li class="Category_list">アライさん</li>
+                    </ul>
+                </dvi>
+            </dvi>
         </dvi>
-        
+
         <p id="jtest">クリックしたアイテムのインデックス番号：<strong id="res"></strong></p>
         <ul id="jtest2">
             <li>インデックス０</li>
@@ -47,17 +65,22 @@
         </ul>
     </dvi>
 
+
     <!--ピックアップ1位～6位とかのやーつ-->
     <script>
         aki = 0;
-        for (d = 0; d <= 1; d++) {
-            document.write('<div id="pickup' + d + '">');
+        var size = $('.Category_list').length;
+        for (d = 0; d <= size; d++) {
+            document.write('<div id="pickup' + d + '" class="pickup" style="position: absolute;top: 67px;left: 341px;width: 950px;height: 460px; z-index: ' + (1 - d) + '; background-color: #373737;> ');
             basstop = 40; //top基本 
             c = 1; //img
             for (i = 1; i <= 3; i++) {
                 bassleft = 0; //left基本
                 for (j = 1; j <= 2; j++) {
                     aki++;
+                    if (c == 1) {
+                        document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
+                    }
                     document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
                     document.write('<img class="pick_icon" src="image/ico.jpg" style="position: absolute; left:' + (bassleft + 10 - (-2 * j)) + 'px; top:' + (basstop + 54) + 'px" />');
                     document.write('<img class="pick_rank" src="image/' + c + '.png" style="position: absolute; left:' + (bassleft + 12 - (-1 * j)) + 'px; top:' + (basstop - 4) + 'px" />');
@@ -82,19 +105,18 @@
     <!-- テストCODE -->
 
     <script type="text/javascript">
+        isc = 0;
         $(function() {
             $("li").click(function() {
+                var size = $('.Category_list').length;
+                alert(size);
+                isc++;
                 var index = $("li").index(this);
-                $("#res").text("" + index + "").css("color", "red");
-                if (index == 0) {
-                    $("#pickup0").css('z-index', 2);
-                    $("#pickup1").css('z-index', -1);
-                } else if (index == 1) {
-                    $("#pickup0").css('z-index', -1);
-                    $("#pickup1").css('z-index', 2);
-
+                $("#res").text("" + index + isc + "").css("color", "red");
+                for (e = 0; e <= size; e++) {
+                    $('#pickup' + e).css('z-index', -2);
                 }
-
+                $('#pickup' + index).css('z-index', 2);
 
             });
         });
@@ -103,12 +125,15 @@
 
 
 
-    <!-- テストCODE / -->
+    <!--フッター-->
+    <div id="start_footer2">&nbsp;</div>
+    <a href="home.html" id="top_link">Home</a>
+    <a href="profile.html" id="profile_link">Profile</a>
+    <a href="category.html" id="category_link">Category</a>
 
 
 
-    <main>
-    </main>
+
 </body>
 
 </html>
