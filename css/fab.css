@@ -1,0 +1,642 @@
+
+/*-----------------------紹介ページ全般--------------------------------*/
+#about_header {
+    /*黒ヘッダー部*/
+    width: 100%;
+    height: 130px;
+    background-color: #373737;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+#ab_back {
+    z-index: -1;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #eceeee;
+}
+
+#ad_header {
+    /*黒ヘッダー部*/
+    width: 100%;
+    height: 130px;
+    background-color: #373737;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+#ad_back {
+    z-index: -1;
+    position: fixed;
+    top: 130px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #eceeee;
+}
+
+#topdai {
+    z-index: 10;
+    position: relative;
+    top: 0.1em;
+    left: 9em;
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#dai {
+    z-index: 11;
+    position: fixed;
+    color: #3ba2c2;
+    font-size: 30px;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+#naka {
+    z-index: 11;
+    position: fixed;
+    color: #666;
+    font-size: 19px;
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+
+/*--------------------------↓ログイン後プロフィール↓-------------------------------*/
+
+#people_box {
+    z-index: 0;
+    position: fixed !important;
+    position: absolute;
+    top: 68px;
+    left: 27px;
+    width: 301px;
+    height: 201px;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+    overflow: hidden;
+}
+
+#people_backcolor {
+    z-index: 0;
+    position: fixed !important;
+    position: absolute;
+    top: 68px;
+    left: 27px;
+    width: 301px;
+    height: 201px;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#people_space {
+    z-index: 1;
+    position: fixed !important;
+    position: absolute;
+    top: 155px;
+    left: 27px;
+    width: 301px;
+    height: 114px;
+    background-color: rgba(0, 0, 0, 0.03);
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+    overflow: hidden;
+}
+
+.people_icon {}
+
+.people_icon {
+    z-index: 3;
+    position: fixed !important;
+    position: absolute;
+    top: 120px;
+    left: 65px;
+    width: 81px;
+    height: 81px;
+    -webkit-border-top-left-radius: 5vw;
+    -webkit-border-top-right-radius: 5vw;
+    -webkit-border-bottom-right-radius: 5vw;
+    -webkit-border-bottom-left-radius: 5vw;
+    -moz-border-radius-topleft: 5vw;
+    -moz-border-radius-topright: 5vw;
+    -moz-border-radius-bottomright: 5vw;
+    -moz-border-radius-bottomleft: 5vw;
+}
+
+#people_name {
+    z-index: 1;
+    position: fixed !important;
+    position: absolute;
+    top: 133px;
+    left: 167px;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.2em 0;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 160px;
+    height: 30px;
+    overflow: hidden;
+    text-shadow: 1px 1px 5px #3D3D3D;
+}
+
+#people_id {
+    z-index: 1;
+    position: fixed !important;
+    position: absolute;
+    top: 169px;
+    left: 167px;
+    font-size: 1.3em;
+    padding: 0.2em 0;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 160px;
+    height: 30px;
+    overflow: hidden;
+    text-shadow: 1px 1px 5px #3D3D3D;
+}
+
+#people_hr {
+    z-index: 1;
+    position: fixed !important;
+    position: absolute;
+    top: 221px;
+    left: 27px;
+    overflow: hidden;
+    font-size: 1.3em;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 299px;
+}
+
+#people_category {
+    z-index: 1;
+    position: fixed !important;
+    position: absolute;
+    top: 214px;
+    left: 41px;
+    width: 270px;
+    height: 30px;
+    overflow: hidden;
+    font-size: 1.3em;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    text-shadow: 1px 1px 5px #3D3D3D;
+}
+
+
+/*--------------------------↓カテゴリ選択画面↓-------------------------------*/
+
+#category_top {
+    z-index: 3;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 800px;
+    height: 40px;
+    background-color: 3BA2C2;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#category_back {
+    z-index: -1;
+    position: absolute;
+    top: 67px;
+    left: 341px;
+    width: 800px;
+    height: 500px;
+    background-color: #FAFAFA;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+#category_p {
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+    left: 361px;
+    width: 400px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#category_s {
+    z-index: 3;
+    position: absolute;
+    top: 145px;
+    left: 361px;
+    width: 350px;
+    height: 40px;
+    overflow: hidden;
+}
+
+#category_s_button {
+    z-index: 3;
+    position: absolute;
+    top: 145px;
+    left: 621px;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    margin: 0;
+    font-size: 24px;
+    border: solid #A9A9A9 1px;
+    color: white;
+    background-color: #3BA2C2;
+    text-decoration: none;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*----------------プロフィール更新画面-------------------------*/
+
+#profile_up_top {
+    z-index: 3;
+    position: absolute;
+    top: 67px;
+    left: 371px;
+    width: 600px;
+    height: 40px;
+    background-color: 3BA2C2;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile_up_back {
+    z-index: -1;
+    position: absolute;
+    top: 67px;
+    left: 371px;
+    width: 600px;
+    height: 541px;
+    background-color: #FAFAFA;
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+}
+
+.profile_up_icon {
+    z-index: 3;
+    position: absolute;
+    top: 131px;
+    left: 535px;
+    width: 81px;
+    height: 81px;
+    -webkit-border-top-left-radius: 5vw;
+    -webkit-border-top-right-radius: 5vw;
+    -webkit-border-bottom-right-radius: 5vw;
+    -webkit-border-bottom-left-radius: 5vw;
+    -moz-border-radius-topleft: 5vw;
+    -moz-border-radius-topright: 5vw;
+    -moz-border-radius-bottomright: 5vw;
+    -moz-border-radius-bottomleft: 5vw;
+}
+
+#profile_up_name {
+    z-index: 1;
+    position: absolute;
+    top: 125px;
+    left: 670px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3d3d3d;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 290px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#profile_up_id {
+    z-index: 1;
+    position: absolute;
+    top: 160px;
+    left: 670px;
+    font-size: 1.3em;
+    color: #3d3d3d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 270px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#profile_up_hr {
+    z-index: 1;
+    position: absolute;
+    top: 211px;
+    left: 371px;
+    font-size: 1.3em;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 598px;
+    height: 0px;
+    overflow: hidden;
+}
+
+#profile_up_category {
+    z-index: 1;
+    position: absolute;
+    top: 201px;
+    left: 535px;
+    font-size: 1.5em;
+    color: #3d3d3d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 370px;
+    height: 35px;
+    overflow: hidden;
+}
+
+#profile_up_score {
+    z-index: 1;
+    position: absolute;
+    top: 231px;
+    left: 535px;
+    font-size: 2.2em;
+    color: #3d3d3d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 400px;
+    height: 50px;
+    overflow: hidden;
+}
+
+#profile_up_hr2 {
+    z-index: 1;
+    position: absolute;
+    top: 321px;
+    left: 371px;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 598px;
+    height: 0px;
+    overflow: hidden;
+}
+
+#profile_up_fav {
+    z-index: 1;
+    position: absolute;
+    top: 323px;
+    left: 529px;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: #3d3d3d;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+}
+
+#profile_up_rt {
+    z-index: 1;
+    position: absolute;
+    top: 363px;
+    left: 529px;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: #3d3d3d;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+}
+
+#profile_up_rp {
+    z-index: 1;
+    position: absolute;
+    top: 403px;
+    left: 529px;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: #3d3d3d;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+}
+
+#profile_up_other {
+    z-index: 1;
+    position: absolute;
+    top: 443px;
+    left: 529px;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: #3d3d3d;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+}
+
+#profile_up_button {
+    z-index: 3;
+    position: absolute;
+    top: 545px;
+    left: 851px;
+    width: 90px;
+    height: 40px;
+    font-weight: bold;
+    margin: 0;
+    /*余計な隙間を除く*/
+    font-size: 24px;
+    /*文字サイズ*/
+    border: solid #A9A9A9 1px;
+    /*線で囲う*/
+    /*文字と線の間の余白*/
+    color: white;
+    /*文字色*/
+    background-color: #3BA2C2;
+    text-decoration: none;
+    /*下線を表示させない*/
+    /*丸角*/
+    -webkit-border-top-left-radius: 0.5vw;
+    -webkit-border-top-right-radius: 0.5vw;
+    -webkit-border-bottom-right-radius: 0.5vw;
+    -webkit-border-bottom-left-radius: 0.5vw;
+    -moz-border-radius-topleft: 0.5vw;
+    -moz-border-radius-topright: 0.5vw;
+    -moz-border-radius-bottomright: 0.5vw;
+    -moz-border-radius-bottomleft: 0.5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*---------Twitterシェアボタン-----------------*/
+
+#share-button {
+    z-index: 10;
+    position: fixed;
+    top: 49vw;
+    left: 90vw;
+}
+
+/*------------------フッター--------------------------------------*/
+
+#start_footer2 {
+    z-index: 10;
+    position: fixed !important;
+    position: absolute;
+    bottom: 0   ;
+    left: 0;
+    height: 9%;
+    width: 100%;
+    background-color: #373737;
+}
+
+#top_link {
+    /*ホーム画面リンク*/
+    z-index: 11;
+    width: 50px;
+    height: 15px;
+    position: fixed !important;
+    position: absolute;
+    top: 92.0%;
+    left: 15vw;
+    font-size: 13px;
+    color: #8c8c8c;
+    text-decoration: none;
+    /*文字と線の間の余白*/
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+#top_link:hover {
+    /*マウスを重ねた時の動作*/
+    background: #2f2f2f;
+}
+
+#profile_link {
+    /*プロフィール画面リンク*/
+    z-index: 11;
+    width: 50px;
+    height: 15px;
+    position: fixed !important;
+    position: absolute;
+    top: 94.0%;
+    left: 15vw;
+    font-size: 13px;
+    color: #8c8c8c;
+    text-decoration: none;
+    /*文字と線の間の余白*/
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+#profile_link:hover {
+    /*マウスを重ねた時の動作*/
+    background: #2f2f2f;
+}
+
+#category_link {
+    /*カテゴリ画面リンク*/
+    z-index: 11;
+    width: 50px;
+    height: 15px;
+    position: fixed !important;
+    position: absolute;
+    top: 96.0%;
+    left: 15vw;
+    font-size: 13px;
+    color: #8c8c8c;
+    text-decoration: none;
+    /*文字と線の間の余白*/
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+#category_link:hover {
+    /*マウスを重ねた時の動作*/
+    background: #2f2f2f;
+}
+
+
