@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Context displayName="DataSource for Ikitter"
+  docBase="Ikitter"  path="/Ikitter"  reloadable="true">
+
+    <Resource name="jdbc/Ikitter" auth="Container"
+      type="javax.sql.DataSource"
+      username="aki" password="fab"
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost/Ikitter?useUnicode=true&amp;characterEncoding=UTF-8"
+      maxActive="10" maxIdle="4" maxWait="5000"
+      validationQuery="select count(*) from user"
+    />
+
+</Context>
