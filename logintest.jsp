@@ -22,9 +22,8 @@
             OAuthProvider provider = (OAuthProvider) session.getAttribute("provider");
 
             //consumerの復号
-            String oauth_verifier = request.getParameter("oauth_verifier");
             try {
-                provider.retrieveAccessToken(consumer, oauth_verifier);
+                provider.retrieveAccessToken(consumer, request.getParameter("oauth_verifier"));
             } catch (OAuthMessageSignerException | OAuthNotAuthorizedException | OAuthCommunicationException | OAuthExpectationFailedException e) {
                 e.printStackTrace();
             }
@@ -70,6 +69,13 @@
             } catch (OAuthMessageSignerException | OAuthNotAuthorizedException | OAuthExpectationFailedException | OAuthCommunicationException e) {
                 e.printStackTrace();
             }
+        }
+    } else {
+        Twitter twitter = (Twitter) session.getAttribute("twitter");
+        try {
+            user = twitter.verifyCredentials();
+        } catch (TwitterException e) {
+            e.printStackTrace();
         }
     }
 %>
