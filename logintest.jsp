@@ -1,3 +1,19 @@
+<%--
+＼＼ ／:::::::::::::::::::::::::::::::::::く
+　　r'::::::::::::::::::::;;:;;:;;:ｯ､:::::::::::）
+＼ レ''''jrTf"　　　　lﾐ::::::::く　Gaiji以外は
+　　 |　　　　　　　　〈ﾐ:::::::::ﾉ
+＼　|､_　ｬー‐__二ゞ ヾ::∠
+｀`　ゞ:}　 ￣'互.ヾ　　}:j んＬ　見ないでくれないか！
+　　　l/　　 """"´｀　 　 )ﾉ∧
+=-- /　　 　 　 　 　 l　 (ノ　|
+=＝ `弋"__,....._ 　 　 !　 ! 　 Y⌒Y⌒Y⌒
+　　　　 ﾞ､`ー‐'　　　　 ,'　　　　　　　＼
+''"´　　　 ﾞ､￣　 　 ／ ,'　　　　　　　　 ＼
+／　　　　 ヽ＿_／::;' ,'　ノ　　　　　　　｀ヽ
+　 ／／　　　　　 ヾ_,'∠..,,__
+／／　//　　　／´
+--%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" import="oauth.signpost.*,twitter4j.*"%>
 <%@ page import="twitter4j.auth.AccessToken" %>
 <%@ page import="oauth.signpost.exception.OAuthMessageSignerException" %>
