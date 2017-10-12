@@ -554,55 +554,51 @@
     z-index: 10;
     position: fixed;
     top: 49vw;
-    left: 90vw;
+    left: 85vw;
 }
 
-/*------------------フッター--------------------------------------*/
+#kotani-button {
+    z-index: 10;
+    position: fixed;
+    top: 46.5vw;
+    left: 85vw;
+}
+/*------------------改良版フッター--------------------------------------*/
 
-#start_footer2 {
+#footer-long {
+    /*長い方のフッター*/
     z-index: 10;
     position: fixed !important;
     position: absolute;
-    bottom: 0   ;
-    left: 0;
-    height: 9%;
+    bottom: 0;
+    left: 0px;
+    height: 260px;
     width: 100%;
     background-color: #373737;
 }
 
-#top_link {
+#footer-dai {
     /*ホーム画面リンク*/
     z-index: 11;
-    width: 50px;
-    height: 15px;
-    position: fixed !important;
+    width: 200px;
+    height: 35px;
     position: absolute;
-    top: 92.0%;
-    left: 15vw;
-    font-size: 13px;
-    color: #8c8c8c;
+    font-size: 28px;
+    top: 0px;    
+    color: #ffffff;
     text-decoration: none;
-    /*文字と線の間の余白*/
     display: flex;
     align-items: left;
     justify-content: left;
 }
 
-#top_link:hover {
-    /*マウスを重ねた時の動作*/
-    background: #2f2f2f;
-}
-
-#profile_link {
-    /*プロフィール画面リンク*/
+#link {
+    /*ホーム画面リンク*/
     z-index: 11;
-    width: 50px;
-    height: 15px;
-    position: fixed !important;
+    width: 120px;
+    height: 35px;
     position: absolute;
-    top: 94.0%;
-    left: 15vw;
-    font-size: 13px;
+    font-size: 21px;
     color: #8c8c8c;
     text-decoration: none;
     /*文字と線の間の余白*/
@@ -611,32 +607,8 @@
     justify-content: left;
 }
 
-#profile_link:hover {
+#link:hover {
     /*マウスを重ねた時の動作*/
     background: #2f2f2f;
 }
-
-#category_link {
-    /*カテゴリ画面リンク*/
-    z-index: 11;
-    width: 50px;
-    height: 15px;
-    position: fixed !important;
-    position: absolute;
-    top: 96.0%;
-    left: 15vw;
-    font-size: 13px;
-    color: #8c8c8c;
-    text-decoration: none;
-    /*文字と線の間の余白*/
-    display: flex;
-    align-items: left;
-    justify-content: left;
-}
-
-#category_link:hover {
-    /*マウスを重ねた時の動作*/
-    background: #2f2f2f;
-}
-
 
