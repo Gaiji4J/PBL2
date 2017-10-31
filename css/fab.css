@@ -1,5 +1,5 @@
-
 /*-----------------------紹介ページ全般--------------------------------*/
+
 #about_header {
     /*黒ヘッダー部*/
     width: 100%;
@@ -12,7 +12,7 @@
 
 #ab_back {
     z-index: -1;
-    position:fixed;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -156,6 +156,7 @@
     padding: 0.2em 0;
     color: #ffffff;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 160px;
     height: 30px;
@@ -174,6 +175,7 @@
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 160px;
     height: 30px;
@@ -192,6 +194,7 @@
     text-align: center;
     color: #ffffff;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 299px;
 }
@@ -209,6 +212,7 @@
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     text-shadow: 1px 1px 5px #3D3D3D;
 }
@@ -231,8 +235,14 @@
     font-size: 24px;
     color: white;
     font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -297,8 +307,14 @@
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -320,8 +336,14 @@
     font-size: 24px;
     color: white;
     font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -369,6 +391,7 @@
     font-weight: bold;
     color: #3d3d3d;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 290px;
     height: 30px;
@@ -384,6 +407,7 @@
     color: #3d3d3d;
     font-weight: bold;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 270px;
     height: 30px;
@@ -399,6 +423,7 @@
     text-align: center;
     color: #ffffff;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 598px;
     height: 0px;
@@ -414,6 +439,7 @@
     color: #3d3d3d;
     font-weight: bold;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 370px;
     height: 35px;
@@ -429,6 +455,7 @@
     color: #3d3d3d;
     font-weight: bold;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 400px;
     height: 50px;
@@ -443,6 +470,7 @@
     font-size: 1.3em;
     color: #ffffff;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 598px;
     height: 0px;
@@ -459,6 +487,7 @@
     font-weight: bold;
     color: #3d3d3d;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 400px;
     height: 40px;
@@ -475,6 +504,7 @@
     font-weight: bold;
     color: #3d3d3d;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 400px;
     height: 40px;
@@ -491,6 +521,7 @@
     font-weight: bold;
     color: #3d3d3d;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 400px;
     height: 40px;
@@ -507,6 +538,7 @@
     font-weight: bold;
     color: #3d3d3d;
     text-decoration: none;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 400px;
     height: 40px;
@@ -543,8 +575,14 @@
     -moz-border-radius-bottomright: 0.5vw;
     -moz-border-radius-bottomleft: 0.5vw;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -552,25 +590,25 @@
 
 #share-button {
     z-index: 10;
-    position: fixed;
-    top: 49vw;
+    position: absolute;
+    top: ;
     left: 85vw;
 }
 
 #kotani-button {
     z-index: 10;
-    position: fixed;
-    top: 46.5vw;
-    left: 85vw;
+    position: absolute;
+    top: 230px;
+    left: 1270px;
 }
+
 /*------------------改良版フッター--------------------------------------*/
 
 #footer-long {
     /*長い方のフッター*/
     z-index: 10;
-    position: fixed !important;
     position: absolute;
-    bottom: 0;
+    top: 0px;
     left: 0px;
     height: 260px;
     width: 100%;
@@ -584,11 +622,17 @@
     height: 35px;
     position: absolute;
     font-size: 28px;
-    top: 0px;    
+    top: 0px;
     color: #ffffff;
     text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
     align-items: left;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
 }
 
@@ -602,8 +646,14 @@
     color: #8c8c8c;
     text-decoration: none;
     /*文字と線の間の余白*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
     align-items: left;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
 }
 
@@ -612,3 +662,18 @@
     background: #2f2f2f;
 }
 
+/*  フッダー　あき担当部位*/
+
+#footer_msk {
+    z-index: 30;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 43px;
+    background: #2f2f2f;
+}
+
+#footer_msk:hover {
+    height: 260px;
+}
