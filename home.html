@@ -26,52 +26,126 @@
     <!--プロフィール枠**************************************u****************************-->
     <div id="profile_space">
         <div id="profile_backcolor"></div>
-        <div id="login_font">Ikitterを始めよう！</div>
+        <div id="login_font">ログインはこちら</div>
+        <!--
         <input type="text" id="id_input" required="required" placeholder="Twitter ID" />
         <input type="password" id="pass_input" required="required" placeholder="Twitter PASS" />
+        -->
         <input type="submit" id="login_Button" value="LOGIN" />
         <p><a href="https://twitter.com/account/begin_password_reset" id="forgot_font">Forgot Twitter Account</a></p>
+        <p><a id="forgot_font2">Ikitterを始めよう。</a></p>
+
     </div>
 
     <!--プロフィール枠******************************************************************-->
     <!--ピックアップ******************************************************************-->
     <div id="pickup_top">PICK UP</div>
-    <dvi>
-        <dvi id="pickup_menu_space">
-            <dvi id="pickup_menu_space_mask">
-                <dvi id="pickup_menu">
-                    <ul class="list_ui">
-                        <script>
-                        </script>
-                        <li class="Category_list">Gaiji4J</li>
-                        <li class="Category_list">アニメ</li>
-                        <li class="Category_list">ゲーム</li>
-                        <li class="Category_list">ツイ廃</li>
-                        <li class="Category_list">可愛い</li>
-                        <li class="Category_list">グルメ</li>
-                        <li class="Category_list">野球</li>
-                        <li class="Category_list">動物</li>
-                        <li class="Category_list">おしゃれ</li>
-                        <li class="Category_list">YouTuber</li>
-                        <li class="Category_list">イラスト</li>
-                        <li class="Category_list">キチガイ</li>
-                        <li class="Category_list">フレンズ</li>
-                        <li class="Category_list">アライさん</li>
+    <script>
+        document.write('<dvi>');
+        document.write('<dvi id="pickup_menu_space">');
+        document.write('<dvi id="pickup_up">');
+        document.write('<img class="yaimg" src="image/ya.jpg" style="top:3px;left:73px;" />');
+        document.write('<img class="yaimg1" src="image/ya1.jpg" style="top:431px;left:73px;" />');
+        document.write('<dvi class="menu_up"></dvi>');
+        document.write('<dvi class="menu_up_msk"></dvi>');
+        document.write('<dvi class="menu_down"></dvi>');
+        document.write('<dvi class="menu_down_msk"></dvi>');
+        document.write('</dvi>');
+        document.write('<dvi id="pickup_menu_space_mask">');
+        document.write('<dvi id="pickup_menu">');
+        document.write('<ul class="list_ui">');
+        var Categorylist = [];
+        Categorylist.push("Gaiji4J");
+        Categorylist.push("アニメ");
+        Categorylist.push("ゲーム");
+        Categorylist.push("ツイ廃");
+        Categorylist.push("可愛い");
+        Categorylist.push("グルメ");
+        Categorylist.push("野球");
+        Categorylist.push("動物");
+        Categorylist.push("おしゃれ");
+        Categorylist.push("YouTuber");
+        Categorylist.push("イラスト");
+        Categorylist.push("フレンズ");
+        for (listcount = 0; listcount <= Categorylist.length; listcount++) {
+            document.write(' <li class="Category_list">' + Categorylist[listcount] + '</li>');
+        }
+        document.write('</ul>');
+        document.write('</dvi>');
+        document.write('</dvi>');
+        document.write('</dvi>');
+        document.write('</dvi>');
+
+    </script>
+    <!--menu:hover------------------------>
+    <script type="text/javascript">
+        $(".menu_up_msk").hover(
+            function() {
+                $('.menu_up').css({
+                    'background-color': 'rgba(0, 0, 0, 0.3)'
+                });
+            },
+            function() {
+                $('.menu_up').css({
+                    'background-color': 'rgba(250, 250, 250, 0)'
+                });
+            }
+        );
+
+        $(".menu_down_msk").hover(
+            function() {
+                $('.menu_down').css({
+                    'background-color': 'rgba(0, 0, 0, 0.3)'
+                });
+            },
+            function() {
+                $('.menu_down').css({
+                    'background-color': 'rgba(250, 250, 250, 0)'
+                });
+            }
+        );
+
+    </script>
+    <!--menu:hover------------------------>
+    <!--カテゴリメニュー　UP・DOWN------------------------>
+    <script type="text/javascript">
+        var udcount = 0;
+        var size = $('.Category_list').length;
+        $(function() {
+            $(".menu_up_msk").click(function() {
+                var offu = $('#pickup_menu').offset();
+                if (udcount != 0) {
+                    $('#pickup_menu').offset({
+                        top: offu.top + 44.5,
+                    });
+                    udcount -= 1;
+                }
+            });
+        });
+
+        $(function() {
+            $(".menu_down_msk").click(function() {
+                var offd = $('#pickup_menu').offset();
+                if (udcount != (size - 9)) {
+                    $('#pickup_menu').offset({
+                        top: offd.top - 44.5,
+                    });
+                    udcount += 1;
+                }
+            });
+        });
+
+    </script>
+    <!--カテゴリメニュー　UP・DOWN------------------------>
 
 
-                    </ul>
-                </dvi>
-            </dvi>
-        </dvi>
-
-        <p id="jtest">クリックしたアイテムのインデックス番号：<strong id="res"></strong></p>
-        <ul id="jtest2">
-            <li>インデックス０</li>
-            <li>インデックス１</li>
-        </ul>
-    </dvi>
-
-
+    <!--
+    <p id="jtest">クリックしたアイテムのインデックス番号：<strong id="res"></strong></p>
+    <ul id="jtest2">
+        <li>インデックス０</li>
+        <li>インデックス１</li>
+    </ul>
+-->
     <!--ピックアップ1位～6位とかのやーつ-->
     <script>
         aki = 0;
@@ -87,8 +161,8 @@
                     if (c == 1) {
                         document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
                     }
-                    document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
-                    document.write('<img class="pick_icon" src="image/ico.jpg" style="position: absolute; left:' + (bassleft + 10 - (-2 * j)) + 'px; top:' + (basstop + 54) + 'px" />');
+                    document.write('<img class="pick_img" src="image/tes' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
+                    document.write('<img class="pick_icon" src="image/pp' + c + '.jpg" style="position: absolute; left:' + (bassleft + 10 - (-2 * j)) + 'px; top:' + (basstop + 54) + 'px" />');
                     document.write('<img class="pick_rank" src="image/' + c + '.png" style="position: absolute; left:' + (bassleft + 12 - (-1 * j)) + 'px; top:' + (basstop - 4) + 'px" />');
                     document.write(' <div class="pick_bassfont" style="position: absolute; left:' + (bassleft + 79 - (-1 * j)) + 'px; top:' + (basstop + 3) + 'px">カテゴリ：</div>');
                     document.write('<div class="pick_Category" style="position: absolute; left:' + (bassleft + 179 - (-1 * j)) + 'px; top:' + (basstop + 3) + 'px" >Gaiji4J</div>');
@@ -105,6 +179,7 @@
             }
             document.write('</div>');
         }
+
     </script>
     <!--ピックアップ******************************************************************-->
 
@@ -115,7 +190,6 @@
         $(function() {
             $("li").click(function() {
                 var size = $('.Category_list').length;
-                alert(size);
                 isc++;
                 var index = $("li").index(this);
                 $("#res").text("" + index + isc + "").css("color", "red");
@@ -126,17 +200,13 @@
 
             });
         });
+
     </script>
 
 
 
 
     <!--フッター-->
-    <div id="start_footer2">&nbsp;</div>
-    <a href="home.html" id="top_link">Home</a>
-    <a href="profile.html" id="profile_link">Profile</a>
-    <a href="category.html" id="category_link">Category</a>
-
 
 
 
