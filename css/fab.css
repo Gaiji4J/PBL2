@@ -223,8 +223,8 @@
 #category_top {
     z-index: 3;
     position: absolute;
-    top: 67px;
-    left: 341px;
+    top: 0px;
+    left: 0px;
     width: 800px;
     height: 40px;
     background-color: 3BA2C2;
@@ -267,8 +267,8 @@
 #category_p {
     z-index: 3;
     position: absolute;
-    top: 100px;
-    left: 361px;
+    top: 30px;
+    left: 10px;
     width: 400px;
     height: 30px;
     overflow: hidden;
@@ -277,8 +277,8 @@
 #category_s {
     z-index: 3;
     position: absolute;
-    top: 145px;
-    left: 361px;
+    top: 80px;
+    left: 20px;
     width: 350px;
     height: 40px;
     overflow: hidden;
@@ -287,8 +287,8 @@
 #category_s_button {
     z-index: 3;
     position: absolute;
-    top: 145px;
-    left: 621px;
+    top: 80px;
+    left: 350px;
     width: 100px;
     height: 40px;
     font-weight: bold;
@@ -591,7 +591,7 @@
 #share-button {
     z-index: 10;
     position: absolute;
-    top: ;
+    top: 100px;
     left: 85vw;
 }
 
@@ -615,15 +615,15 @@
     background-color: #373737;
 }
 
-#footer-dai {
+.footer-dai {
     /*ホーム画面リンク*/
     z-index: 11;
     width: 200px;
     height: 35px;
     position: absolute;
-    font-size: 28px;
+    font-size: 14px;
     top: 0px;
-    color: #ffffff;
+    color: #8C8C8C;
     text-decoration: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -636,11 +636,12 @@
     justify-content: left;
 }
 
-#link {
+
+.link {
     /*ホーム画面リンク*/
     z-index: 11;
-    width: 120px;
-    height: 35px;
+    width: auto;
+    height: auto;
     position: absolute;
     font-size: 21px;
     color: #8c8c8c;
@@ -655,11 +656,13 @@
     -webkit-box-pack: left;
     -ms-flex-pack: left;
     justify-content: left;
+
 }
 
-#link:hover {
+.link:hover {
     /*マウスを重ねた時の動作*/
     background: #2f2f2f;
+    font-size: 28px;
 }
 
 /*  フッダー　あき担当部位*/
@@ -670,9 +673,10 @@
     bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 43px;
+    height: 25px;
     background: #2f2f2f;
 }
+
 
 #footer_msk:hover {
     height: 260px;

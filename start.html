@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="css/aki.css" rel="stylesheet">
     <link href="css/fab.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>Ikitter</title>
 </head>
 
@@ -21,32 +22,32 @@
 
             <div id="footer-long">
 
-                <a id="footer-dai" class="dai-1" style="left: 20px;">Ikitter紹介</a>
-                <a href="about.html" id="link" class="aboutlink" style="top: 50px; left: 20px;">About</a>
-                <a href="how.html" id="link" class="howlink" style="top: 100px; left: 20px;">How</a>
-                <a href="advertiser.html" id="link" class="advertiserlink" style="top: 150px; left: 20px;">Advertiser</a>
+                <a class="footer-dai" style="left: 20px;">Ikitter紹介</a>
+                <a href="about.html" class="link" style="top: 50px; left: 20px;">About</a>
+                <a href="how.html" class="link"  style="top: 100px; left: 20px;">How</a>
+                <a href="advertiser.html" class="link"  style="top: 150px; left: 20px;">Advertiser</a>
 
-                <a id="footer-dai" class="dai-2" style="left: 190px;">各種ページ</a>
-                <a href="start.html" id="link" class="startlink" style="top: 50px; left: 195px;">Start</a>
-                <a href="home.html" id="link" class="homelink" style="top: 100px; left: 195px;">Home</a>
-                <a href="profile.html" id="link" class="profilelink" style="top: 150px; left: 195px;">Prifile</a>
-                <a href="category.html" id="link" class="categorylink" style="top: 200px; left: 195px;">Category</a>
+                <a class="footer-dai" style="left: 190px;">各種ページ</a>
+                <a href="start.html" class="link"  style="top: 50px; left: 195px;">Start</a>
+                <a href="home.html" class="link"  style="top: 100px; left: 195px;">Home</a>
+                <a href="profile.html" class="link"  style="top: 150px; left: 195px;">Prifile</a>
+                <a href="category.html" class="link"  style="top: 200px; left: 195px;">Category</a>
 
-                <a id="footer-dai" class="dai-3" style="left: 360px;">お知らせ</a>
-                <a href="#.html" id="link" class="infolink" style="top: 50px; left: 365px;">Info</a>
-                <a href="#.html" id="link" class="bloglink" style="top: 100px; left: 365px;">開発Blog</a>
+                <a class="footer-dai" style="left: 360px;">お知らせ</a>
+                <a href="#.html" class="link"  style="top: 50px; left: 365px;">Info</a>
+                <a href="#.html" class="link"  style="top: 100px; left: 365px;">開発Blog</a>
 
-                <a id="footer-dai" class="dai-1" style="left: 500px;">外部ツール</a>
-                <a href="#.html" id="link" class="adutterlink" style="top: 50px; left: 505px;">Adutter</a>
-                <a href="#.html" id="link" class="akitterlink" style="top: 100px; left: 505px;">Akitter</a>
+                <a class="footer-dai" style="left: 500px;">外部ツール</a>
+                <a href="#.html" class="link"  style="top: 50px; left: 505px;">Adutter</a>
+                <a href="#.html" class="link"  style="top: 100px; left: 505px;">Akitter</a>
 
-                <a id="footer-dai" class="dai-1" style="left: 670px;">各種リンク</a>
-                <a href="https://twitter.com" id="link" class="twitterlink" style="top: 50px; left: 673px;">Twitter</a>
-                <a href="https://tweetdeck.twitter.com" id="link" class="decklink" style="top: 100px; left: 673px;">TweetDeck</a>
-                <a href="https://ja.wikipedia.org/wiki/Twitter" id="link" class="wikilink" style="top: 150px; left: 673px;">Twitterとは</a>
+                <a class="footer-dai" style="left: 670px;">各種リンク</a>
+                <a href="https://twitter.com" class="link"  style="top: 50px; left: 673px;">Twitter</a>
+                <a href="https://tweetdeck.twitter.com" class="link"  style="top: 100px; left: 673px;">TweetDeck</a>
+                <a href="https://ja.wikipedia.org/wiki/Twitter" class="link"  style="top: 150px; left: 673px;">Twitterとは</a>
 
-                <a id="footer-dai" class="dai-1" style="left: 830px;">お問い合わせ</a>
-                <a href="https://twitter.com/akiirokoutya" id="link" class="wikilink" style="top: 50px; left: 835px;">@秋色紅茶</a>
+                <a class="footer-dai" style="left: 830px;">お問い合わせ</a>
+                <a href="https://twitter.com/akiirokoutya" class="link"  style="top: 50px; left: 835px;">@秋色紅茶</a>
             </div>
             <div id="kotani-button">
                 <!-- ぼくたかゆき！ -->
@@ -96,10 +97,30 @@
 
                 </script>
             </div>
+
         </div>
 
 
     </main>
 </body>
+
+<!--フッダー用スクリプト-->
+<script type="text/javascript">
+    $("#footer_msk").hover(
+        function() {
+            $('.footer-dai').css({
+                'font-size': '28px'
+            });
+        },
+        function() {
+            $('.footer-dai').css({
+                'font-size': '14px'
+            });
+        }
+    );
+
+</script>
+<!--フッダー用スクリプト-->
+
 
 </html>
