@@ -247,7 +247,7 @@
 }
 
 #category_back {
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 67px;
     left: 341px;
@@ -621,8 +621,8 @@
     width: 250px;
     height: 35px;
     position: absolute;
-    font-size: 22px;
-    top: 0px;
+    font-size: 18px;
+    top: 5px;
     color: #EBEBEB;
     text-decoration: none;
     display: -webkit-box;
