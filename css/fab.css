@@ -618,12 +618,12 @@
 .footer-dai {
     /*ホーム画面リンク*/
     z-index: 11;
-    width: 200px;
+    width: 250px;
     height: 35px;
     position: absolute;
-    font-size: 14px;
+    font-size: 22px;
     top: 0px;
-    color: #8C8C8C;
+    color: #EBEBEB;
     text-decoration: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -633,7 +633,7 @@
     align-items: left;
     -webkit-box-pack: left;
     -ms-flex-pack: left;
-    justify-content: left;
+    vertical-align: middle;
 }
 
 
@@ -644,7 +644,7 @@
     height: auto;
     position: absolute;
     font-size: 21px;
-    color: #8c8c8c;
+    color: #969696;
     text-decoration: none;
     /*文字と線の間の余白*/
     display: -webkit-box;
@@ -661,8 +661,9 @@
 
 .link:hover {
     /*マウスを重ねた時の動作*/
-    background: #2f2f2f;
+    background: #424242;
     font-size: 28px;
+    color: #ffffff;
 }
 
 /*  フッダー　あき担当部位*/
@@ -673,7 +674,7 @@
     bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 25px;
+    height: 41px;
     background: #2f2f2f;
 }
 
