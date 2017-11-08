@@ -67,6 +67,18 @@
         Categorylist.push("YouTuber");
         Categorylist.push("イラスト");
         Categorylist.push("フレンズ");
+        Categorylist.push("Gaiji4J");
+        Categorylist.push("アニメ");
+        Categorylist.push("ゲーム");
+        Categorylist.push("ツイ廃");
+        Categorylist.push("可愛い");
+        Categorylist.push("グルメ");
+        Categorylist.push("野球");
+        Categorylist.push("動物");
+        Categorylist.push("おしゃれ");
+        Categorylist.push("YouTuber");
+        Categorylist.push("イラスト");
+        Categorylist.push("フレンズ");
         for (listcount = 0; listcount <= Categorylist.length; listcount++) {
             document.write(' <li class="Category_list">' + Categorylist[listcount] + '</li>');
         }
@@ -126,7 +138,7 @@
         $(function() {
             $(".menu_down_msk").click(function() {
                 var offd = $('#pickup_menu').offset();
-                if (udcount != (size - 9)) {
+                if (udcount != (size - 10)) {
                     $('#pickup_menu').offset({
                         top: offd.top - 44.5,
                     });
@@ -151,7 +163,8 @@
         aki = 0;
         var size = $('.Category_list').length;
         for (d = 0; d <= size; d++) {
-            document.write('<div id="pickup' + d + '" class="pickup" style="position: absolute;top: 67px;left: 341px;width: 950px;height: 460px; z-index: ' + (1 - d) + '; background-color: #3BA2C2;> ');
+            document.write('<div id="pickup' + d + '" class="pickup" style="position: absolute;top: 67px;left: 341px;width: 950px;height: 460px; z-index: ' + (1 - d) + '; background-color: #3BA2C2;>');
+
             basstop = 40; //top基本 
             c = 1; //img
             for (i = 1; i <= 3; i++) {
@@ -173,11 +186,16 @@
                     document.write(' <div class="rank_linkmask"  style="position: absolute; left:' + bassleft + 'px; top:' + (basstop) + 'px"><a href="https://twitter.com/akiirokoutya" class="a_link"></a></div>');
                     bassleft += 376;
                     c++;
+
                     document.write('</img>');
                 }
                 basstop += 120;
+
             }
+            document.write('<div class="participant">参加人数：' + aki + '</div>');
+            document.write('<div class="participant2">盛り上がり度：' + aki + '</div>');
             document.write('</div>');
+
         }
 
     </script>

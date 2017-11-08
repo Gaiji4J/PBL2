@@ -685,3 +685,27 @@ body {
     top: 429px;
     left: 0px;
 }
+
+.participant {
+    z-index: 9;
+    position: absolute;
+    top: 410px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    color: #FAFAFA;
+    font-weight: bold;
+}
+
+.participant2 {
+    z-index: 9;
+    position: absolute;
+    top: 410px;
+    left: 300px;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    color: #FAFAFA;
+    font-weight: bold;
+}
