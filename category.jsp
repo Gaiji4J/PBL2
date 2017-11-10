@@ -12,13 +12,18 @@
 <%
   request.setCharacterEncoding("UTF-8");
   String cname = request.getParameter("cname");
-  String Aki = "AAAA";
+  String Aki = "TEST1";
   String username = "";
   String userid = "";
   String category = "";
   String categoryArray [] = new String[5];
   int flag=0;
+  int i=0;
+  int cnt=0;
 
+  if(cname == "" || cname==null || cname.length()>20 ){
+    flag=-1;
+  }
 
   Context ctx = null;
   DataSource ds = null;
@@ -57,13 +62,18 @@
       category = rs2.getString("category");
     }
 
-    if(flag==0){
-      strSql="select * from category where name =";
-      ps3 = con.prepareStatement(strSql);
-      ps3.setString(1,Aki);
-    while(){
 
-    }
+      strSql="select * from category where name LIKE ?";
+      ps3 = con.prepareStatement(strSql);
+      ps3.setString(1,"%"+cname+"%");
+      rs3 = ps3.executeQuery( );
+        while(rs3.next() && cnt<=4){
+          categoryArray[cnt] = rs3.getString("name");
+          cnt++;
+        /*メモ
+        strSql="select * from category where name LIKE %?%;
+        ps3.setString(1,cname);
+        この書き方だとエラーが起きる*/
   }
     } catch(Exception e) {
       out.println("try block : " + e.getMessage( ));
@@ -71,8 +81,12 @@
       } finally {
         try {
           if (rs != null) rs.close( );
+          if (rs2 != null) rs2.close( );
+          if (rs3 != null) rs3.close( );
           if (con != null) con.close( );
           if (ps != null) ps.close( );
+          if (ps2 != null) ps2.close( );
+          if (ps3 != null) ps3.close( );
         } catch(Exception e) {
           System.out.println("finally block : " + e.getMessage( ));
           e.printStackTrace( );
@@ -114,14 +128,14 @@
         <p id="people_name"><% out.print(username); %></p>
         <p id="people_id">@<% out.print(userid); %></p>
         <hr id="people_hr">
-        <p id="people_category">選択中のカテゴリ：<% out.print(category); %></p>
+        <p id="people_category">選択中のカテゴリ：<br><% out.print(category); %></p>
     </div>
 
     <!-------------カテゴリ選択画面------------------>
     <div id="category_back">
         <div id="category_top">カテゴリ</div>
         <p id="category_p">カテゴリ名を入力してください。</p>
-        <form action="#" method="post">
+        <form action="category.jsp" method="post">
             <input id="category_s" type="search" name="cname" placeholder="カテゴリを入力">
             <input id="category_s_button" type="submit" name="submit" value="検索">
         </form>
@@ -132,31 +146,59 @@
               if(cname!=null){
                 if(flag==0){
                   //入力したカテゴリがない場合
-                  out.println(cname +"<p>検索したカテゴリは存在しませんでした。");
+                  out.println("検索ワード:" + cname +"<p>検索したカテゴリは存在しませんでした。");
                   out.println("<br>　新規で「" + cname + "」を作成しますか？");
-
                   out.println("<form action=\"insert.jsp\" method=\"post\">");
                   out.println("<input type=\"hidden\" name=\"cname\" value=\""+ cname +"\">");
                   out.println("<input type=\"hidden\" name=\"userid\" value=\""+ userid +"\">");
                   out.println("<input id=\"category_change\" type=\"submit\" value=\"作成\"></p>");
+                  if(cnt>0){
+                    out.println("<br><br><br>検索ワードを含むカテゴリ<br>");
+                    for(i=0;cnt>=i&&categoryArray[i]!=null;i++){
+                      if((cname.equals(categoryArray[i]))==false){
+                        out.print("<a href=\"category.jsp?cname="+categoryArray[i]+"\">"+ categoryArray[i] +"</a><br>");
+                      }
+                    }
+                  }
 
-                }else{
+                }else if (flag==1){
                 //入力したカテゴリがある場合
-                  out.println(cname +"<p>検索したカテゴリは存在しました。");
-                  if(category.length()==0){
-                  out.println("<br>カテゴリ「" + cname + "」に参加しますか？");
+                  out.println("検索ワード:"+cname +"<p>検索したカテゴリは存在しました。");
+                  if(category.length()==0){//categoryに参加してるか判定
+                  out.println("<br>　カテゴリ「" + cname + "」に参加しますか？");
                   out.println("<form action=\"change.jsp\" method=\"post\">");
                   out.println("<input type=\"hidden\" name=\"cname\" value=\""+ cname +"\">");
                   out.println("<input type=\"hidden\" name=\"userid\" value=\""+ userid +"\">");
                   out.println("<input id=\"category_change\" type=\"submit\" value=\"参加\"></p>");
-                }else{
-                  out.println("<br>参加中のカテゴリを変更しますか？");
+                  if(cnt>1){
+                    out.println("<br><br><br>検索ワードを含むカテゴリ<br>");
+                    for(i=0;cnt>=i&&categoryArray[i]!=null;i++){
+                      if((cname.equals(categoryArray[i]))==false){
+                      out.print("<a href=\"category.jsp?cname="+categoryArray[i]+"\">"+ categoryArray[i] +"</a><br>");
+                      }
+                    }
+                  }
+
+                }else   if((cname.equals(category))==false){//いま参加中のカテゴリと同じか判定
+                  out.println("<br>　参加中のカテゴリを変更しますか？");
                   out.println("<form action=\"change.jsp\" method=\"post\">");
                   out.println("<input type=\"hidden\" name=\"cname\" value=\""+ cname +"\">");
                   out.println("<input type=\"hidden\" name=\"userid\" value=\""+ userid +"\">");
                   out.println("<input id=\"category_change\" type=\"submit\" value=\"変更\"></p>");
+                  if(cnt>1){
+                    out.println("<br><br><br>検索ワードを含むカテゴリ<br>");
+                    for(i=0;cnt>=i&&categoryArray[i]!=null;i++){
+                      if((cname.equals(categoryArray[i]))==false){
+                      out.print("<a href=\"category.jsp?cname="+categoryArray[i]+"\">"+ categoryArray[i] +"</a><br>");
+                      }
+                    }
+                  }
+                } else {
+                  out.println("<br>　現在設定中のカテゴリです。");
                 }
-                }
+              }else if(flag==-1){
+                    out.println("無効な検索ワード");
+                  }
               }
           %>
         </div>

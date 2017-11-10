@@ -98,7 +98,7 @@
     top: 68px;
     left: 27px;
     width: 301px;
-    height: 201px;
+    height: 231px;
     -webkit-border-top-left-radius: 0.5vw;
     -webkit-border-top-right-radius: 0.5vw;
     -webkit-border-bottom-right-radius: 0.5vw;
@@ -116,7 +116,7 @@
     top: 155px;
     left: 27px;
     width: 301px;
-    height: 114px;
+    height: 144px;
     background-color: rgba(0, 0, 0, 0.03);
     -webkit-border-bottom-right-radius: 0.5vw;
     -webkit-border-bottom-left-radius: 0.5vw;
@@ -206,7 +206,7 @@
     top: 214px;
     left: 41px;
     width: 270px;
-    height: 30px;
+    height: 60px;
     overflow: hidden;
     font-size: 1.3em;
     color: #ffffff;
