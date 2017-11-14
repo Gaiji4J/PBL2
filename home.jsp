@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <dvi>
+    <div>
         <div id="test"></div>
         <header id="start_header">&nbsp;</header>
         <!--ヘッダーらしい-->
@@ -18,9 +18,9 @@
         <!--左上のロゴボタン-->
         <a href="test.html" id="login_botan">Login</a>
         <!--右上のログインボタン-->
-        <img id="start_image" src="image\DSC_00042.jpg" />
+        <img id="start_image" src="image/DSC_00042.jpg" />
         <!--画像-->
-    </dvi>
+    </div>
     <!--プロフィール枠**************************************u****************************-->
     <div id="profile_space">
         <div id="profile_backcolor"></div>
@@ -34,10 +34,10 @@
     <!--プロフィール枠******************************************************************-->
     <!--ピックアップ******************************************************************-->
     <div id="pickup_top">PICK UP</div>
-    <dvi>
-        <dvi id="pickup_menu_space">
-            <dvi id="pickup_menu_space_mask">
-                <dvi id="pickup_menu">
+    <div>
+        <div id="pickup_menu_space">
+            <div id="pickup_menu_space_mask">
+                <div id="pickup_menu">
                     <ul class="list_ui">
                         <li class="Category_list">Gaiji4J</li>
                         <li class="Category_list">アニメ</li>
@@ -54,22 +54,24 @@
                         <li class="Category_list">フレンズ</li>
                         <li class="Category_list">アライさん</li>
                     </ul>
-                </dvi>
-            </dvi>
-        </dvi>
+                </div>
+            </div>
+        </div>
 
         <p id="jtest">クリックしたアイテムのインデックス番号：<strong id="res"></strong></p>
         <ul id="jtest2">
             <li>インデックス０</li>
             <li>インデックス１</li>
         </ul>
-    </dvi>
+    </div>
 
 
     <!--ピックアップ1位～6位とかのやーつ-->
     <script>
         aki = 0;
         var size = $('.Category_list').length;
+        var bassleft;
+        var basstop;
         for (d = 0; d <= size; d++) {
             document.write('<div id="pickup' + d + '" class="pickup" style="position: absolute;top: 67px;left: 341px;width: 950px;height: 460px; z-index: ' + (1 - d) + '; background-color: #373737;> ');
             basstop = 40; //top基本
@@ -78,7 +80,7 @@
                 bassleft = 0; //left基本
                 for (j = 1; j <= 2; j++) {
                     aki++;
-                    if (c == 1) {
+                    if (c === 1) {
                         document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
                     }
                     document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');

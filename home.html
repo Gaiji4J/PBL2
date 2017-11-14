@@ -10,7 +10,7 @@
 
 
 <body>
-    <dvi>
+    <div>
         <div id="test"></div>
         <header id="start_header">&nbsp;</header>
         <!--ヘッダーらしい-->
@@ -20,9 +20,9 @@
         <!--左上のロゴボタン-->
         <a href="test.html" id="login_botan">Login</a>
         <!--右上のログインボタン-->
-        <img id="start_image" src="image\DSC_00042.jpg" />
+        <img id="start_image" src="image/DSC_00042.jpg" />
         <!--画像-->
-    </dvi>
+    </div>
     <!--プロフィール枠**************************************u****************************-->
     <div id="profile_space">
         <div id="profile_backcolor"></div>
@@ -41,18 +41,18 @@
     <!--ピックアップ******************************************************************-->
     <div id="pickup_top">PICK UP</div>
     <script>
-        document.write('<dvi>');
-        document.write('<dvi id="pickup_menu_space">');
-        document.write('<dvi id="pickup_up">');
+        document.write('<div>');
+        document.write('<div id="pickup_menu_space">');
+        document.write('<div id="pickup_up">');
         document.write('<img class="yaimg" src="image/ya.jpg" style="top:3px;left:73px;" />');
         document.write('<img class="yaimg1" src="image/ya1.jpg" style="top:431px;left:73px;" />');
-        document.write('<dvi class="menu_up"></dvi>');
-        document.write('<dvi class="menu_up_msk"></dvi>');
-        document.write('<dvi class="menu_down"></dvi>');
-        document.write('<dvi class="menu_down_msk"></dvi>');
-        document.write('</dvi>');
-        document.write('<dvi id="pickup_menu_space_mask">');
-        document.write('<dvi id="pickup_menu">');
+        document.write('<div class="menu_up"></div>');
+        document.write('<div class="menu_up_msk"></div>');
+        document.write('<div class="menu_down"></div>');
+        document.write('<div' + ' class="menu_down_msk"></div>');
+        document.write('</div>');
+        document.write('<div id="pickup_menu_space_mask">');
+        document.write('<div id="pickup_menu">');
         document.write('<ul class="list_ui">');
         var Categorylist = [];
         Categorylist.push("Gaiji4J");
@@ -83,10 +83,10 @@
             document.write(' <li class="Category_list">' + Categorylist[listcount] + '</li>');
         }
         document.write('</ul>');
-        document.write('</dvi>');
-        document.write('</dvi>');
-        document.write('</dvi>');
-        document.write('</dvi>');
+        document.write('</div>');
+        document.write('</div>');
+        document.write('</div>');
+        document.write('</div>');
 
     </script>
     <!--menu:hover------------------------>
@@ -171,7 +171,7 @@
                 bassleft = 0; //left基本
                 for (j = 1; j <= 2; j++) {
                     aki++;
-                    if (c == 1) {
+                    if (c === 1) {
                         document.write('<img class="pick_img" src="image/aki' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');
                     }
                     document.write('<img class="pick_img" src="image/tes' + c + '.jpg" style="position: absolute; left:' + bassleft + 'px; top:' + basstop + 'px">');

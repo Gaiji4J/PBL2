@@ -10,12 +10,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>DBテスト</title>
+    <meta charset="UTF-8">
+    <title>DBテスト</title>
 </head>
 <body>
 
-  <%
+<%
 
     Context ctx = null;
     DataSource ds = null;
@@ -24,30 +24,34 @@
     PreparedStatement ps = null;
     ResultSet rs = null;
     try {
-      ctx = new InitialContext( );
-      ds = (DataSource)ctx.lookup("java:comp/env/jdbc/Ikitter");
-      con = ds.getConnection();
-      strSql = "select * from sample";
-      ps = con.prepareStatement(strSql);
-      rs = ps.executeQuery( );
-      while(rs.next( )){
-        out.println("name = " + rs.getString("name") + ", URL=" + rs.getString("userid") + "<br>");
-      }
-    } catch(Exception e) {
-      System.out.println("try block : " + e.getMessage( ));
-      e.printStackTrace( );
+        ctx = new InitialContext();
+        ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Ikitter");
+        con = ds.getConnection();
+        strSql = "select * from sample";
+        ps = con.prepareStatement(strSql);
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            out.println("name = " + rs.getString("name") + ", URL=" + rs.getString("userid") + "<br>");
+        }
+    } catch (Exception e) {
+        System.out.println("try block : " + e.getMessage());
+        e.printStackTrace();
     } finally {
-      try {
-        if (rs != null) rs.close( );
-        if (con != null) con.close( );
-        if (ps != null) ps.close( );
-      } catch(Exception e) {
-        System.out.println("finally block : " + e.getMessage( ));
-        e.printStackTrace( );
-      }
+        try {
+            if (rs != null) rs.close();
+            if (con != null) con.close();
+            if (ps != null) ps.close();
+        } catch (Exception e) {
+            System.out.println("finally block : " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 %>
-<a href="test2.jsp"><button>消す</button></a>
-<a href="test3.jsp"><button>Gaiji4j推薦枠追加！</button></a>
+<a href="test2.jsp">
+    <button>消す</button>
+</a>
+<a href="test3.jsp">
+    <button>Gaiji4j推薦枠追加！</button>
+</a>
 </body>
 </html>

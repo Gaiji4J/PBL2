@@ -1,13 +1,10 @@
-<%@ page import="java.net.*" %>
+<%@ page import="javax.naming.Context" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.sql.DataSource" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.SQLException" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="javax.sql.DataSource" %>
-<%@ page import="javax.naming.Context" %>
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="java.util.*" %>
 
 <%
   request.setCharacterEncoding("UTF-8");
@@ -121,8 +118,8 @@
 
     <!--------------個人プロフィール枠------------>
 
-    <img id="people_backcolor" src="image\aki1.jpg" />
-    <img id="people_backcolor" src="image\aki.jpg" />
+    <img class="people_backcolor" src="image/aki1.jpg" />
+    <img class="people_backcolor" src="image/aki.jpg" />
     <div id="people_space">
         <img class="people_icon" src="image\ico.jpg" />
         <p id="people_name"><% out.print(username); %></p>

@@ -13,8 +13,8 @@
 #ab_back {
     z-index: -1;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #eceeee;
@@ -34,7 +34,7 @@
     z-index: -1;
     position: fixed;
     top: 130px;
-    left: 0px;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #eceeee;
@@ -69,7 +69,6 @@
     font-weight: bold;
 }
 
-
 /*--------------------------↓ログイン後プロフィール↓-------------------------------*/
 
 #people_box {
@@ -80,18 +79,12 @@
     left: 27px;
     width: 301px;
     height: 201px;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -webkit-border-bottom-right-radius: 0.5vw;
-    -webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
     overflow: hidden;
 }
 
-#people_backcolor {
+.people_backcolor {
     z-index: 0;
     position: fixed !important;
     position: absolute;
@@ -99,14 +92,8 @@
     left: 27px;
     width: 301px;
     height: 231px;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -webkit-border-bottom-right-radius: 0.5vw;
-    -webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
 }
 
 #people_space {
@@ -125,7 +112,8 @@
     overflow: hidden;
 }
 
-.people_icon {}
+.people_icon {
+}
 
 .people_icon {
     z-index: 3;
@@ -135,14 +123,8 @@
     left: 65px;
     width: 81px;
     height: 81px;
-    -webkit-border-top-left-radius: 5vw;
-    -webkit-border-top-right-radius: 5vw;
-    -webkit-border-bottom-right-radius: 5vw;
-    -webkit-border-bottom-left-radius: 5vw;
-    -moz-border-radius-topleft: 5vw;
-    -moz-border-radius-topright: 5vw;
-    -moz-border-radius-bottomright: 5vw;
-    -moz-border-radius-bottomleft: 5vw;
+    -webkit-border-radius: 5vw;
+    -moz-border-radius: 5vw;
 }
 
 #people_name {
@@ -217,17 +199,16 @@
     text-shadow: 1px 1px 5px #3D3D3D;
 }
 
-
 /*--------------------------↓カテゴリ選択画面↓-------------------------------*/
 
 #category_top {
     z-index: 3;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 800px;
     height: 40px;
-    background-color: 3BA2C2;
+    background-color: #3BA2C2;
     -webkit-border-top-left-radius: 0.5vw;
     -webkit-border-top-right-radius: 0.5vw;
     -moz-border-radius-topleft: 0.5vw;
@@ -254,14 +235,8 @@
     width: 800px;
     height: 500px;
     background-color: #FAFAFA;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -webkit-border-bottom-right-radius: 0.5vw;
-    -webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
 }
 
 #category_p {
@@ -298,14 +273,8 @@
     color: white;
     background-color: #3BA2C2;
     text-decoration: none;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -webkit-border-bottom-right-radius: 0.5vw;
-    -webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -318,7 +287,6 @@
     justify-content: center;
 }
 
-
 /*----------------プロフィール更新画面-------------------------*/
 
 #profile_up_top {
@@ -328,7 +296,7 @@
     left: 371px;
     width: 600px;
     height: 40px;
-    background-color: 3BA2C2;
+    background-color: #3BA2C2;
     -webkit-border-top-left-radius: 0.5vw;
     -webkit-border-top-right-radius: 0.5vw;
     -moz-border-radius-topleft: 0.5vw;
@@ -355,14 +323,8 @@
     width: 600px;
     height: 541px;
     background-color: #FAFAFA;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -webkit-border-bottom-right-radius: 0.5vw;
-    -webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
 }
 
 .profile_up_icon {
@@ -372,14 +334,8 @@
     left: 535px;
     width: 81px;
     height: 81px;
-    -webkit-border-top-left-radius: 5vw;
-    -webkit-border-top-right-radius: 5vw;
-    -webkit-border-bottom-right-radius: 5vw;
-    -webkit-border-bottom-left-radius: 5vw;
-    -moz-border-radius-topleft: 5vw;
-    -moz-border-radius-topright: 5vw;
-    -moz-border-radius-bottomright: 5vw;
-    -moz-border-radius-bottomleft: 5vw;
+    -webkit-border-radius: 5vw;
+    -moz-border-radius: 5vw;
 }
 
 #profile_up_name {
@@ -426,7 +382,7 @@
     -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 598px;
-    height: 0px;
+    height: 0;
     overflow: hidden;
 }
 
@@ -473,7 +429,7 @@
     -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
     width: 598px;
-    height: 0px;
+    height: 0;
     overflow: hidden;
 }
 
@@ -566,14 +522,8 @@
     text-decoration: none;
     /*下線を表示させない*/
     /*丸角*/
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -webkit-border-bottom-right-radius: 0.5vw;
-    -webkit-border-bottom-left-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
-    -moz-border-radius-bottomright: 0.5vw;
-    -moz-border-radius-bottomleft: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -608,8 +558,8 @@
     /*長い方のフッター*/
     z-index: 10;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     height: 260px;
     width: 100%;
     background-color: #373737;
@@ -628,14 +578,13 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: left;
-    -ms-flex-align: left;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: left;
-    -webkit-box-pack: left;
-    -ms-flex-pack: left;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     vertical-align: middle;
 }
-
 
 .link {
     /*ホーム画面リンク*/
@@ -650,11 +599,11 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: left;
-    -ms-flex-align: left;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: left;
-    -webkit-box-pack: left;
-    -ms-flex-pack: left;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: left;
 
 }
@@ -671,13 +620,12 @@
 #footer_msk {
     z-index: 30;
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 41px;
     background: #2f2f2f;
 }
-
 
 #footer_msk:hover {
     height: 260px;
