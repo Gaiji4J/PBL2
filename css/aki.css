@@ -709,3 +709,13 @@ body {
     color: #FAFAFA;
     font-weight: bold;
 }
+
+.underspace {
+    z-index: 5;
+    position: absolute;
+    top: 550px;
+    left: 341px;
+    width: 952px;
+    height: 600px;
+    background-color: #ffffff;
+}
