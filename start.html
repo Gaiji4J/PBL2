@@ -48,42 +48,44 @@
             <a class="footer-dai" style="left: 1070px;">お問い合わせ</a>
             <a href="https://twitter.com/akiirokoutya" class="link" style="top: 45px; left: 1070px;">・@秋色紅茶</a>
         </div>
-        <div id="kotani-button">
-            <!-- ぼくたかゆき！ -->
-            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">例のTweet #たかゆき</a>
-            <audio id="sound-file" preload="auto">
-                <source src="sound/aki.wav" type="audio/wav">
-            </audio>
+               <div id="kotani-button">
+                <!-- ぼくたかゆき！ -->
+                 <a href="https://twitter.com/intent/tweet?text=Ikitter%e3%82%92%e5%a7%8b%e3%82%81%e3%82%88%e3%81%86%ef%bc%81%0a&url=http://example.jp/&hashtags=,Ikitter" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow" class="twitter-link" ><img src="image/takayuki.png" alt="ツイート" width="96" height="30" /></a>
+                <audio id="sound-file" preload="auto">
+                    <source src="sound/takayuki.wav" type="audio/wav">
+                </audio>
+                <script type="text/javascript">
+                    window.twttr = (function(d, s, id) {
+                        var t, js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        return window.twttr || (t = {
+                            _e: [],
+                            ready: function(f) {
+                                t._e.push(f)
+                            }
+                        });
+                    }(document, "script", "twitter-wjs"));
 
-            <script type="text/javascript">
-                window.twttr = (function (d, s, id) {
-                    var t, js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "https://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                    return window.twttr || (t = {
-                        _e: [],
-                        ready: function (f) {
-                            t._e.push(f)
-                        }
+                    twttr.ready(function(twttr) {
+                        twttr.events.bind('tweet', function(event) {
+                            console.log('ツイート完了');
+                            document.getElementById('sound-file').play();
+                        });
                     });
-                }(document, "script", "twitter-wjs"));
-
-                twttr.ready(function (twttr) {
-                    twttr.events.bind('tweet', function (event) {
-                        console.log('ツイート完了');
-                        document.getElementById('sound-file').play();
-                    });
-                });
-            </script>
-        </div>
-        <div id="share-button">
-            <a href="https://twitter.com/intent/tweet?text=Ikitter%e3%82%92%e5%a7%8b%e3%82%81%e3%82%88%e3%81%86%ef%bc%81%0a&url=http://example.jp/&hashtags=,Ikitter"
-               onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
-               rel="nofollow" class="twitter-link"><img src="image/shere.png" alt="ツイート" width="93" height="27"/></a>
-        </div>
+                </script>
+            </div>
+            
+            <div id="share-button">
+                <a href="https://twitter.com/share?text=Ikitter%e3%82%92%e5%a7%8b%e3%82%81%e3%82%88%e3%81%86%ef%bc%81%0a&url=http://example.jp/&hashtags=,Ikitter"
+ onclick="
+    window.open('https://twitter.com/share?text=Ikitter%e3%82%92%e5%a7%8b%e3%82%81%e3%82%88%e3%81%86%ef%bc%81%0a&url=http://example.jp/&hashtags=,Ikitter','subwin','width=650,height=470');
+    return false;
+ "><img src="image/shere.png" alt="ツイート" width="93" height="27" /></a>  
+            </div>
 
     </div>
 
