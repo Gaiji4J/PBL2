@@ -87,7 +87,6 @@
         document.write('</div>');
         document.write('</div>');
         document.write('</div>');
-
     </script>
     <!--menu:hover------------------------>
     <script type="text/javascript">
@@ -116,7 +115,6 @@
                 });
             }
         );
-
     </script>
     <!--menu:hover------------------------>
     <!--カテゴリメニュー　UP・DOWN------------------------>
@@ -146,7 +144,6 @@
                 }
             });
         });
-
     </script>
     <!--カテゴリメニュー　UP・DOWN------------------------>
 
@@ -197,7 +194,6 @@
             document.write('</div>');
 
         }
-
     </script>
     <!--ピックアップ******************************************************************-->
 
@@ -218,7 +214,6 @@
 
             });
         });
-
     </script>
 
 
@@ -284,7 +279,6 @@
                         document.getElementById('sound-file').play();
                     });
                 });
-
             </script>
         </div>
         <div id="share-button">
@@ -300,7 +294,6 @@
                         fjs.parentNode.insertBefore(js, fjs);
                     }
                 }(document, 'script', 'twitter-wjs');
-
             </script>
         </div>
 
@@ -319,12 +312,53 @@
                 });
             }
         );
-
     </script>
     <!--フッダー用スクリプト-->
 
     <!--下のランダム検索お気に入りスペース-->
-    <div class="underspace"></div>
+    <div class="free_title">カテゴリ一覧：検索</div>
+    <div class="view_back"></div>
+    <div id="underspace1" class="us"></div>
+    <div id="underspace2" class="us"></div>
+    <div id="underspace3" class="us"></div>
+    <div id="underspace4" class="us"></div>
+    <div id="underspace0" class="us">
+        <p class="category_p2">検索したいカテゴリーを入力してください。</p>
+        <form action="#" method="post">
+            <input class="category_s2" type="search" name="search" placeholder="カテゴリを入力">
+            <input class="category_s_button2" type="submit" name="submit" value="検索">
+        </form>
+        <div class="content">
+        </div>
+    </div>
+    <ul id="nav">
+        <li id="search_ward"><a>並び替え</a>
+            <ul>
+                <li class="li_ward"><a class="li0">検索</a></li>
+                <li class="li_ward"><a class="li1">新着</a></li>
+                <li class="li_ward"><a class="li2">古参</a></li>
+                <li class="li_ward"><a class="li3">ランダム</a></li>
+                <li class="li_ward"><a class="li4">人数</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!--スクリプト ページ表示-->
+    <script type="text/javascript">
+        $(function() {
+            $('.li_ward').click(function() {
+                var index = $(this).index();
+                var ui_ward = $('ul#nav').find('.li' + index).text();
+                alert('要素:' + index + '番目' + ui_ward + 'ワード' + Text);
+                $(".free_title").html('カテゴリ一覧：' + ui_ward);
+                $('.us').css('z-index', -2);
+                $('#underspace' + index).css('z-index', 5);
+
+
+
+            });
+        });
+    </script>
+
     <!--下のランダム検索お気に入りスペース-->
 
 
