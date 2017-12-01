@@ -20,10 +20,12 @@
 out.println("<script type=\"text/javascript\">");
 out.println("var rank = [ ];");
 out.println("var category = [ ];");
+out.println("var Participation = []");
 out.println("var username = [ ];");
 out.println("var userid = [ ];");
 out.println("var score = [ ];");
 out.println("var Categorylist = [];");
+
 
 Context ctx = null;
 DataSource ds = null;
@@ -31,6 +33,8 @@ Connection con = null;
 String strSql = null;
 PreparedStatement ps = null;
 ResultSet rs = null;
+PreparedStatement ps2 = null;
+ResultSet rs2 = null;
 
 int count=1;
 int i=0;
@@ -56,14 +60,25 @@ try {
     count++;
     i++;
   }
+  i=0;
+  strSql="select * from piccategory";
+  ps2 = con.prepareStatement(strSql);
+  rs2 = ps2.executeQuery( );
+    while(rs2.next()){
+      out.println("Participation[" + i + "] = \'" + rs2.getInt("num") + "\';");
+      i++;
+    }
+
 } catch(Exception e) {
   out.println("try block : " + e.getMessage( ));
   e.printStackTrace( );
 } finally {
   try {
     if (rs != null) rs.close( );
+    if (rs2 != null) rs.close( );
     if (con != null) con.close( );
     if (ps != null) ps.close( );
+    if (ps2 != null) ps.close( );
   } catch(Exception e) {
     System.out.println("finally block : " + e.getMessage( ));
     e.printStackTrace( );
@@ -257,7 +272,7 @@ try {
                     document.write(' <div class="rank_name" style="position: absolute; left:' + (bassleft + 79 - (-1 * j)) + 'px; top:' + (basstop + 28) + 'px">'+ username[aki] +'</div>');
                     document.write('<div class="rank_score" style="position: absolute; left:' + (bassleft + 84 - (-6 * j)) + 'px; top:' + (basstop + 73) + 'px">'+ score[aki] +'</div>');
                     document.write('<div class="rank_mask" style="position: absolute; left:' + (bassleft + 75 - (-1 * j)) + 'px; top:' + (basstop + 7) + 'px"></div>');
-                    document.write(' <div class="rank_linkmask"  style="position: absolute; left:' + bassleft + 'px; top:' + (basstop) + 'px"><a href="https://twitter.com/akiirokoutya" class="a_link"></a></div>');
+                    document.write(' <div class="rank_linkmask"  style="position: absolute; left:' + bassleft + 'px; top:' + (basstop) + 'px"><a href="https://twitter.com/'+ userid[aki] +'" class="a_link"></a></div>');
                     bassleft += 376;
                     c++;
 
@@ -266,8 +281,8 @@ try {
                 basstop += 120;
 
             }
-            document.write('<div class="participant">参加人数：' + aki + '</div>');
-            document.write('<div class="participant2">盛り上がり度：' + aki + '</div>');
+            document.write('<div class="participant">参加人数：' + Participation[d] + '</div>');
+            document.write('<div class="participant2">盛り上がり度：' + (d+1) + '</div>');
             document.write('</div>');
 
         }
@@ -396,6 +411,11 @@ try {
 
     </script>
     <!--フッダー用スクリプト-->
+
+    <!--下のランダム検索お気に入りスペース-->
+    <div class="underspace"></div>
+    <!--下のランダム検索お気に入りスペース-->
+
 
 
 </body>
