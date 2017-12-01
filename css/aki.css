@@ -704,71 +704,57 @@ body {
 #underspace0 {
     z-index: 5;
     position: absolute;
-    top: 550px;
+    top: 590px;
     left: 341px;
     width: 952px;
     height: 200px;
     background-color: #ffffff;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
+    overflow: hidden;
+
 }
 
 #underspace1 {
     z-index: -1;
     position: absolute;
-    top: 550px;
+    top: 590px;
     left: 341px;
     width: 952px;
     height: 100px;
     background-color: #ffffff;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
+    overflow: hidden;
 }
 
 #underspace2 {
     z-index: -1;
     position: absolute;
-    top: 550px;
+    top: 590px;
     left: 341px;
     width: 952px;
     height: 100px;
     background-color: #ffffff;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
+    overflow: hidden;
 }
 
 #underspace3 {
     z-index: -1;
     position: absolute;
-    top: 550px;
+    top: 590px;
     left: 341px;
     width: 952px;
     height: 100px;
     background-color: #ffffff;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
+    overflow: hidden;
 }
 
 #underspace4 {
     z-index: -1;
     position: absolute;
-    top: 550px;
+    top: 590px;
     left: 341px;
     width: 952px;
     height: 100px;
     background-color: #ffffff;
-    -webkit-border-top-left-radius: 0.5vw;
-    -webkit-border-top-right-radius: 0.5vw;
-    -moz-border-radius-topleft: 0.5vw;
-    -moz-border-radius-topright: 0.5vw;
+    overflow: hidden;
 }
 
 .view_back {
@@ -856,6 +842,15 @@ body {
     width: 270px;
     background: #ffffff;
     border: double 5px #22A1C0;
+
+}
+
+.search_font {
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+    height: 30;
+    width: auto;
 
 }
 
