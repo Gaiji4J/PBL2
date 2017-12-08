@@ -848,9 +848,11 @@ body {
 .search_font {
     position: absolute;
     left: 15px;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
     height: 30;
     width: auto;
+    color: #373737;
 
 }
 

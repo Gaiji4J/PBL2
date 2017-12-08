@@ -345,37 +345,162 @@
                 var index = $(this).index();
                 var ui_ward = $('ul#nav').find('.li' + index).text();
                 alert('要素:' + index + '番目' + ui_ward + 'ワード' + Text);
+                var title_switch = $(".free_title").text();
+                $('.us').css('height', 200 + 'px');
+                /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓新着処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
                 if (ui_ward == '新着') {
                     alert('新着順で表示しろ');
                     $('body').append('<div id="underspace1" class="us"></div>');
                     var search_list = new Array();
                     /* 小谷くんが追加したときにこの間のコードはコメント化して */
-                    for (ssc = 0; ssc < 100; ssc++) {
-                        search_list.push(ssc);
+                    var baseStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    var result = "";
+                    for (ssi = 0; ssi < 100; ssi++) {
+                        for (var si = 0; si < 20; si++) {
+                            result += baseStr.charAt(Math.floor(Math.random() * 62));
+                        }
+                        search_list.push(result);
+                        result = "";
+                    }
+                    search_list.push('てすと１');
+                    search_list.push('てすと２');
+                    alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+                    /* 小谷くんが追加したときにこの間のコードはコメント化して */
+                    alert(search_list.length);
+                    var end = search_list.length;
+                    var sc = 0;
+                    var ssc = 0;
+                    $('.search_font').remove();
+                    while (sc != end) {
+                        if ((sc % 2) == 0) {
+                            $('#underspace1').append('<div class="search_font" style="top:' + (10 + ((sc - ssc) * 35)) + 'px;">' + search_list[sc] + '</div>');
+                            sc++;
+                        } else {
+                            $('#underspace1').append('<div class="search_font" style="top:' + (10 + (ssc * 35)) + 'px;left:400px;">' + search_list[sc] + '</div>');
+                            ssc++;
+                            sc++;
+                        }
+                    }
+                    $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
+                    alert(Math.floor(end / 2));
+                } else if (ui_ward == '古参') {
+                    alert('古参順で表示しろ');
+                    $('body').append('<div id="underspace2" class="us"></div>');
+
+                    /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓古参処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+                    var search_list = new Array();
+                    /* 小谷くんが追加したときにこの間のコードはコメント化して */
+                    var baseStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    var result = "";
+                    for (ssi = 0; ssi < 100; ssi++) {
+                        for (var si = 0; si < 20; si++) {
+                            result += baseStr.charAt(Math.floor(Math.random() * 62));
+                        }
+                        search_list.push(result);
+                        result = "";
+                    }
+                    search_list.push('てすと１');
+                    search_list.push('てすと２');
+                    alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+                    /* 小谷くんが追加したときにこの間のコードはコメント化して */
+                    alert(search_list.length);
+                    var end = search_list.length;
+                    var sc = 0;
+                    var ssc = 0;
+                    $('.search_font').remove();
+                    while (sc != end) {
+                        if ((sc % 2) == 0) {
+                            $('#underspace2').append('<div class="search_font" style="top:' + (10 + ((sc - ssc) * 35)) + 'px;">' + search_list[end - sc - 1] + '</div>');
+                            sc++;
+                        } else {
+                            $('#underspace2').append('<div class="search_font" style="top:' + (10 + (ssc * 35)) + 'px;left:400px;">' + search_list[end - sc - 1] + '</div>');
+                            ssc++;
+                            sc++;
+                        }
+                    }
+                    $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
+                    alert(Math.floor(end / 2));
+
+                    /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ランダム処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+                } else if (ui_ward == 'ランダム') {
+                    alert('ランダムで表示しろ');
+                    $('body').append('<div id="underspace3" class="us"></div>');
+                    var search_list = new Array();
+                    /* 小谷くんが追加したときにこの間のコードはコメント化して */
+                    var baseStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    var result = "";
+                    for (ssi = 0; ssi < 100; ssi++) {
+                        for (var si = 0; si < 20; si++) {
+                            result += baseStr.charAt(Math.floor(Math.random() * 62));
+                        }
+                        search_list.push(result);
+                        result = "";
+                    }
+                    search_list.push('てすと１');
+                    search_list.push('てすと２');
+                    alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+                    for (var i = search_list.length - 1; i > 0; i--) {
+                        var r = Math.floor(Math.random() * (i + 1));
+                        var tmp = search_list[i];
+                        search_list[i] = search_list[r];
+                        search_list[r] = tmp;
                     }
                     /* 小谷くんが追加したときにこの間のコードはコメント化して */
                     alert(search_list.length);
                     var end = search_list.length;
                     var sc = 0;
+                    var ssc = 0;
+                    $('.search_font').remove();
                     while (sc != end) {
-                        $('#underspace1').append('<div class="search_font" style="top:' + (10 + (sc * 30)) + 'px;">' + search_list[sc] + '</div>');
-                        $('.us').css({
-                            'height': 100 + (30 * end) + 'px'
-                        });
-                        sc++;
+                        if ((sc % 2) == 0) {
+                            $('#underspace3').append('<div class="search_font" style="top:' + (10 + ((sc - ssc) * 35)) + 'px;">' + search_list[sc] + '</div>');
+                            sc++;
+                        } else {
+                            $('#underspace3').append('<div class="search_font" style="top:' + (10 + (ssc * 35)) + 'px;left:400px;">' + search_list[sc] + '</div>');
+                            ssc++;
+                            sc++;
+                        }
                     }
-
-
-
-                } else if (ui_ward == '古参') {
-                    alert('古参順で表示しろ');
-                    $('body').append('<div id="underspace2" class="us"></div>');
-                } else if (ui_ward == 'ランダム') {
-                    alert('ランダムで表示しろ');
-                    $('body').append('<div id="underspace3" class="us"></div>');
+                    $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
+                    alert(Math.floor(end / 2));　　
+                    /*-----------------------------------------------------------------------------------------------------------------*/
                 } else if (ui_ward == '人数') {
                     alert('人数で表示しろks');
                     $('body').append('<div id="underspace4" class="us"></div>');
+                    /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓人数処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+                    var search_list = new Array();
+                    /* 小谷くんが追加したときにこの間のコードはコメント化して */
+                    var baseStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    var result = "";
+                    for (ssi = 0; ssi < 100; ssi++) {
+                        for (var si = 0; si < 20; si++) {
+                            result += baseStr.charAt(Math.floor(Math.random() * 62));
+                        }
+                        search_list.push(result + ':' + (end - ssi) + '人');
+                        result = "";
+                    }
+                    search_list.push('てすと１');
+                    search_list.push('てすと２');
+                    alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+                    /* 小谷くんが追加したときにこの間のコードはコメント化して */
+                    alert(search_list.length);
+                    var end = search_list.length;
+                    var sc = 0;
+                    var ssc = 0;
+                    $('.search_font').remove();
+                    while (sc != end) {
+                        if ((sc % 2) == 0) {
+                            $('#underspace4').append('<div class="search_font" style="top:' + (10 + ((sc - ssc) * 35)) + 'px;">' + search_list[sc] + '</div>');
+                            sc++;
+                        } else {
+                            $('#underspace4').append('<div class="search_font" style="top:' + (10 + (ssc * 35)) + 'px;left:400px;">' + search_list[sc] + '</div>');
+                            ssc++;
+                            sc++;
+                        }
+                    }
+                    $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
+                    alert(Math.floor(end / 2));
+                    /*--------------------------------------------------------------------------------------------------------------------*/
                 }
                 $(".free_title").html('カテゴリ一覧：' + ui_ward);
                 $('.us').css('z-index', -2);
