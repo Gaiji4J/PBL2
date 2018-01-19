@@ -113,7 +113,7 @@ try {
         <!--ヘッダーらしい-->
         <div id="start_header2"></div>
         <!--上のヘッダー-->
-        <a href="home.html" id="ikitter_log">Ikitter</a>
+        <a href="home.jsp" id="ikitter_log">Ikitter</a>
         <!--左上のロゴボタン-->
         <a href="test.html" id="login_botan">Login</a>
         <!--右上のログインボタン-->
@@ -334,31 +334,31 @@ try {
 
         <div id="footer-long">
 
-            <a class="footer-dai" style="left: 70px;">Ikitter紹介</a>
-            <a href="about.html" class="link" style="top: 45px; left: 70px;">・About</a>
-            <a href="how.html" class="link" style="top: 85px; left: 70px;">・How</a>
-            <a href="advertiser.html" class="link" style="top: 125px; left: 70px;">・Advertiser</a>
+          <a class="footer-dai" style="left: 70px;">Ikitter紹介</a>
+          <a href="about.html" class="link" style="top: 45px; left: 70px;">・About</a>
+          <a href="how.html" class="link" style="top: 85px; left: 70px;">・How</a>
+          <a href="advertiser.html" class="link" style="top: 125px; left: 70px;">・Advertiser</a>
 
-            <a class="footer-dai" style="left: 270px;">各種ページ</a>
-            <a href="start.html" class="link" style="top: 45px; left: 270px;">・Start</a>
-            <a href="home.html" class="link" style="top: 85px; left: 270px;">・Home</a>
-            <a href="profile.html" class="link" style="top: 125px; left: 270px;">・Prifile</a>
-            <a href="category.jsp" class="link" style="top: 165px; left: 270px;">・Category</a>
+          <a class="footer-dai" style="left: 270px;">各種ページ</a>
+          <a href="start.html" class="link" style="top: 45px; left: 270px;">・Start</a>
+          <a href="home.jsp" class="link" style="top: 85px; left: 270px;">・Home</a>
+          <a href="profile.jsp" class="link" style="top: 125px; left: 270px;">・Prifile</a>
+          <a href="category.jsp" class="link" style="top: 165px; left: 270px;">・Category</a>
 
-            <a class="footer-dai" style="left: 470px;">お知らせ</a>
-            <a href="#.html" class="link" style="top: 45px; left: 470px;">・Info</a>
-            <a href="#.html" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
+          <a class="footer-dai" style="left: 470px;">お知らせ</a>
+          <a href="info.html" class="link" style="top: 45px; left: 470px;">・Info</a>
+          <a href="#.html" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
 
-            <a class="footer-dai" style="left: 670px;">外部ツール</a>
-            <a href="#.html" class="link" style="top: 45px; left: 670px;">・Adutter</a>
-            <a href="#.html" class="link" style="top: 85px; left: 670px;">・Akitter</a>
+          <a class="footer-dai" style="left: 670px;">外部ツール</a>
+          <a href="adutter.html" class="link" style="top: 45px; left: 670px;">・Adutter</a>
+          <a href="akitter.html" class="link" style="top: 85px; left: 670px;">・Akitter</a>
 
-            <a class="footer-dai" style="left: 870px;">各種リンク</a>
-            <a href="https://twitter.com" class="link" style="top: 45px; left: 870px;">・Twitter</a>
-            <a href="https://tweetdeck.twitter.com" class="link" style="top: 85px; left: 870px;">・TweetDeck</a>
-            <a href="https://ja.wikipedia.org/wiki/Twitter" class="link" style="top: 125px; left: 870px;">・Twitterとは</a>
-            <a class="footer-dai" style="left: 1070px;">お問い合わせ</a>
-            <a href="https://twitter.com/akiirokoutya" class="link" style="top: 45px; left: 1070px;">・@秋色紅茶</a>
+          <a class="footer-dai" style="left: 870px;">各種リンク</a>
+          <a href="https://twitter.com" class="link" style="top: 45px; left: 870px;">・Twitter</a>
+          <a href="https://tweetdeck.twitter.com" class="link" style="top: 85px; left: 870px;">・TweetDeck</a>
+          <a href="https://ja.wikipedia.org/wiki/Twitter" class="link" style="top: 125px; left: 870px;">・Twitterとは</a>
+          <a class="footer-dai" style="left: 1070px;">お問い合わせ</a>
+          <a href="https://twitter.com/akiirokoutya" class="link" style="top: 45px; left: 1070px;">・@秋色紅茶</a>
         </div>
         <div id="kotani-button">
             <!-- ぼくたかゆき！ -->
