@@ -345,16 +345,20 @@
 </script>
 <!--フッダー用スクリプト-->
 
-                                                <!--ログイン判定-->
-                                                <script type="text/javascript">
-                                                    if (session.getAttribute("twitter") != null) {
-                                                    } else {
-                                                        $('#tes2').hide();
-                                                        $('#tes3').hide();
-                                                    }
 
-                                                </script>
                                                 <!--ログイン判定-->
+   <% //twitterオブジェクトが存在する場合(ログイン済みの場合)
+        if (session.getAttribute("twitter") != null) { %>
+                                                       <script type="text/javascript">
+                                                         $('#tes2').hide();
+                                                        $('#tes3').hide();
+                                                        </script>
+    <% //そうでない場合
+    } else { %>
+
+    <% } %>
+                                                <!--ログイン判定-->
+
 
 
 </body>
