@@ -85,6 +85,9 @@
 
     int fav = 0;
     int ret = 0;
+    int word = 0;
+
+    double score = 0;
 
 
     ResponseList<Status> tl = null;
@@ -95,10 +98,16 @@
         e.printStackTrace();
     }
 
+    assert tl != null;
     for(Status status : tl)
     {
         fav += status.getFavoriteCount();
         ret += status.getRetweetCount();
+        if (status.getText().matches(".*" + "カテゴリ単語" + ".*")) word++;
     }
 
+    assert user != null;
+    score = (fav * 1.2) + (ret * 1.5) + (word * 2) + (user.getFollowersCount() * 0.2);
+
+    System.out.print(score);
 %>
