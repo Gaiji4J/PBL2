@@ -132,21 +132,7 @@
 <img class="people_backcolor" src="<%=user != null ? user.getProfileBannerURL() : null%>"/>
 <img class="people_icon" src="<%=user != null ? user.getProfileImageURL() : null%>"/>
 
-                                            <div id="tes2">
-                                                <div id="profile_up_top2">ログインしてください。</div>
-                                                <div id="profile_up_back2"></div>
-                                            </div>
 
-                                            <div id="tes3">
-                                                <div id="profile_space">
-                                                    <div id="profile_backcolor"></div>
-                                                    <div id="login_font">ログインはこちら</div>
-                                                    <input type="submit" id="login_Button" value="LOGIN" />
-                                                    <p><a href="https://twitter.com/account/begin_password_reset" id="forgot_font">Forgot Twitter Account</a></p>
-                                                    <p><a id="forgot_font2">Ikitterを始めよう。</a></p>
-
-                                                </div>
-                                            </div>
 
 <%
 
@@ -243,6 +229,21 @@
 
 <!-------------カテゴリ選択画面------------------>
 
+                                            <div id="tes2">
+                                                <div id="profile_up_top2">ログインしてください。</div>
+                                                <div id="profile_up_back2"></div>
+                                            </div>
+
+                                            <div id="tes3">
+                                                <div id="profile_space">
+                                                    <div id="profile_backcolor"></div>
+                                                    <div id="login_font">ログインはこちら</div>
+                                                    <input type="submit" id="login_Button" value="LOGIN" />
+                                                    <p><a href="https://twitter.com/account/begin_password_reset" id="forgot_font">Forgot Twitter Account</a></p>
+                                                    <p><a id="forgot_font2">Ikitterを始めよう。</a></p>
+
+                                                </div>
+                                            </div>
 
 <main>
 </main>
@@ -347,10 +348,9 @@
                                                 <!--ログイン判定-->
                                                 <script type="text/javascript">
                                                     if (session.getAttribute("twitter") != null) {
+                                                    } else {
                                                         $('#tes2').hide();
                                                         $('#tes3').hide();
-                                                    } else {
-
                                                     }
 
                                                 </script>
