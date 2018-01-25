@@ -6,6 +6,13 @@
 <%@ page import="oauth.signpost.exception.OAuthCommunicationException" %>
 <%@ page import="oauth.signpost.basic.DefaultOAuthProvider" %>
 <%@ page import="oauth.signpost.basic.DefaultOAuthConsumer" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="javax.sql.DataSource" %>
+<%@ page import="javax.naming.Context" %>
+<%@ page import="javax.naming.InitialContext" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <%
@@ -110,4 +117,57 @@
     score = (fav * 1.2) + (ret * 1.5) + (word * 2) + (user.getFollowersCount() * 0.2);
 
     System.out.print(score);
+
+    int flag = 0;
+    Context ctx = null;
+    DataSource ds = null;
+    Connection con = null;
+    String strSql = null;
+    PreparedStatement ps = null;
+    ResultSet rs = null;
+
+    try {
+      ctx = new InitialContext( );
+      ds = (DataSource)ctx.lookup("java:comp/env/jdbc/Ikitter");
+      con = ds.getConnection();
+      strSql = "select * from score where id = ? ";
+      ps = con.prepareStatement(strSql);
+      ps.setString(1,user != null ? user.getScreenName() : null);
+      rs = ps.executeQuery( );
+      while(rs.next( )){
+        strSql = "UPDATE score SET score = ? , fabo= ? , RT = ? where id=?";
+        ps = con.prepareStatement(strSql);
+        ps.setDouble(1,score);
+        ps.setInt(2, fav);
+        ps.setInt(3, ret);
+        ps.setString(4, user != null ? user.getScreenName() : null);
+        ps.executeUpdate( );
+
+        flag = 1;
+      }
+
+      if(flag==0){
+        strSql = "insert into score(name,id,score,fabo,RT) values(?,?,?,?,?)";
+        ps = con.prepareStatement(strSql);
+        ps.setString(1, user != null ? user.getName() : null);
+        ps.setString(2, user != null ? user.getScreenName() : null);
+        ps.setDouble(3, score);
+        ps.setInt(4, fav);
+        ps.setInt(5, ret);
+        ps.executeUpdate();
+      }
+
+    }catch(Exception e) {
+        out.println("try block : " + e.getMessage( ));
+        e.printStackTrace( );
+        } finally {
+          try {
+            if (rs != null) rs.close( );
+            if (con != null) con.close( );
+            if (ps != null) ps.close( );
+          } catch(Exception e) {
+            System.out.println("finally block : " + e.getMessage( ));
+            e.printStackTrace( );
+            }
+        }
 %>

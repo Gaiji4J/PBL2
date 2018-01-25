@@ -23,7 +23,8 @@ create table user(
 create table category(
 	name		varchar(100),
 	id			varchar(100),
-	score		int
+	score		int,
+	num			int
 );
 
 
@@ -49,6 +50,7 @@ create table piccategory(
 create table score(
 	name		varchar(100),
 	id			varchar(100),
+	score   int,
 	fabo		int,
 	RT			int,
 	RP			int,
