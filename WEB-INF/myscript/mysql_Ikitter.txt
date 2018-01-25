@@ -18,12 +18,12 @@ create table user(
 	userid			varchar(100),
 	category	varchar(100),
 	score				int
-
 );
 
 create table category(
 	name		varchar(100),
-	id			varchar(100)
+	id			varchar(100),
+	score		int
 );
 
 
@@ -40,6 +40,10 @@ create table picranking(
 	name			varchar(100),
 	userid		varchar(100),
 	score			int
+);
+
+create table piccategory(
+	num 		int
 );
 
 create table score(
@@ -420,3 +424,21 @@ insert into picranking(rank, category, name, userid, score)
 	values('6','カテゴリ12','ユーザー72','user66','1000');
 
 #---------------------------------------------------------
+
+insert into piccategory(num)
+	values('6');
+
+insert into piccategory(num)
+	values('12');
+
+insert into piccategory(num)
+	values('18');
+
+insert into piccategory(num)
+	values('24');
+
+insert into piccategory(num)
+	values('30');
+
+insert into piccategory(num)
+	values('36');
