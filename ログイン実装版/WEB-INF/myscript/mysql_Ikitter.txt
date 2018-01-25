@@ -1,0 +1,444 @@
+﻿# 文字コードのセット
+set names utf8;
+
+# データベース Ikitter の作成
+drop database if exists Ikitter;
+create database Ikitter;
+
+# ユーザー「aki」にパスワード「fab」を設定し、データベース「Ikitter」に対する全ての権限を付与
+grant all privileges on Ikitter.* to aki@localhost identified by "fab";
+
+# データベース Ikitter を使用
+use Ikitter;
+
+# 変わる可能性が高い
+# 何なら現在進行形で変わってる。止まるんじゃねぇぞ…
+create table user(
+	name				varchar(100),
+	userid			varchar(100),
+	category	varchar(100),
+	score				int
+);
+
+create table category(
+	name		varchar(100),
+	id			varchar(100),
+	score		int
+);
+
+
+create table ranking(
+	rank		varchar(100),
+	userid	varchar(100),
+	score		int,
+	category	varchar(100)
+);
+
+create table picranking(
+	rank			int,
+	category	varchar(100),
+	name			varchar(100),
+	userid		varchar(100),
+	score			int
+);
+
+create table piccategory(
+	num 		int
+);
+
+create table score(
+	name		varchar(100),
+	id			varchar(100),
+	fabo		int,
+	RT			int,
+	RP			int,
+	other		int
+);
+
+#テストデータ
+#全部適当だってそれ一番言われてるから
+
+insert into user(name,userid,category,score)
+	values('test1','ABC','Gaiji4J','114514');
+
+insert into user(name,userid,category,score)
+	values('test2','EFG','Gaiji4J','364364');
+
+insert into user(name,userid,category,score)
+	values('test3','HIJ','Gaiji4J','6028');
+
+insert into user(name,userid,category,score)
+	values('test4','KLM','Gaiji4J','919');
+
+insert into user(name,userid,category,score)
+	values('AAAA','AAAa','','0');
+
+insert into score(name,id,fabo,RT,RP,other)
+	values('test1','ABC','1','1','1','1');
+
+insert into score(name,id,fabo,RT,RP,other)
+  values('test2','EFG','2','2','2','2');
+
+insert into score(name,id,fabo,RT,RP,other)
+  values('test3','HIJ','3','3','3','3');
+
+insert into score(name,id,fabo,RT,RP,other)
+  values('test4','KLM','4','4','4','4');
+
+insert into category(name)
+	values('アニメ');
+
+insert into category(name)
+	values('ゲーム');
+
+insert into category(name)
+	values('フレンズ');
+
+insert into category(name)
+	values('KD');
+
+insert into category(name)
+	values('ふぁぶ');
+
+insert into category(name)
+	values('秋色紅茶');
+
+insert into category(name)
+	values('あづ');
+
+insert into category(name)
+	values('さんぜろ');
+
+insert into category(name)
+	values('でぃーん');
+
+insert into category(name)
+	values('格ゲー');
+
+insert into category(name)
+	values('音ゲー');
+
+insert into category(name)
+	values('Gaiji4j');
+
+#home.jsp表示用のテストデータ
+#使いませんでした。ごめん。
+insert into ranking(rank,userid,score,category)
+	values('1','MikuruAndAdu','100000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('2','akiirokoutya','90000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('3','fbr_z ','80000','Gaiji4j1');
+
+insert into ranking(rank,userid,score,category)
+	values('4','tk3032','70000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('5','bravebird1012','65000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('6','@daydream365','60000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('1','MikuruAndAdu','100000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('2','akiirokoutya','90000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('3','fbr_z ','80000','Gaiji4j1');
+
+insert into ranking(rank,userid,score,category)
+	values('4','tk3032','70000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('5','bravebird1012','65000','Gaiji4j');
+
+insert into ranking(rank,userid,score,category)
+	values('6','@daydream365','60000','Gaiji4j');
+
+
+#ランキングテストデータ１----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ1','ユーザー1','user1','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ1','ユーザー2','user2','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ1','ユーザー3','user3','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ1','ユーザー4','user4','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ1','ユーザー5','user5','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ1','ユーザー6','user6','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ２-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ2','ユーザー7','user7','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ2','ユーザー8','user8','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ2','ユーザー9','user9','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ2','ユーザー10','user10','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ2','ユーザー11','user11','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ2','ユーザー12','user12','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ３-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ3','ユーザー13','user13','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ3','ユーザー14','user14','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ3','ユーザー15','user15','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ3','ユーザー16','user16','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ3','ユーザー17','user17','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ3','ユーザー18','user18','1000');
+
+
+#---------------------------------------------------------
+
+#ランキングテストデータ４-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ4','ユーザー19','user19','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ4','ユーザー20','user20','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ4','ユーザー21','user21','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ4','ユーザー22','user22','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ4','ユーザー23','user23','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ4','ユーザー24','user24','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ５-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ5','ユーザー25','user25','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ5','ユーザー26','user26','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ5','ユーザー27','user27','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ5','ユーザー28','user28','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ5','ユーザー29','user29','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ5','ユーザー30','user30','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ６-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ6','ユーザー31','user31','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ6','ユーザー32','user32','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ6','ユーザー33','user33','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ6','ユーザー34','user34','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ6','ユーザー35','user35','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ6','ユーザー36','user36','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ7-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ7','ユーザー37','user37','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ7','ユーザー38','user38','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ7','ユーザー39','user39','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ7','ユーザー40','user40','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ7','ユーザー41','user41','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ7','ユーザー42','user42','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ8-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ8','ユーザー43','user43','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ8','ユーザー44','user44','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ8','ユーザー45','user45','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ8','ユーザー46','user46','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ8','ユーザー47','user47','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ8','ユーザー48','user48','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ9-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ9','ユーザー49','user49','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ9','ユーザー50','user50','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ9','ユーザー51','user51','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ9','ユーザー52','user52','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ9','ユーザー53','user53','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ9','ユーザー54','user54','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ10-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ10','ユーザー55','user55','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ10','ユーザー56','user56','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ10','ユーザー57','user57','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ10','ユーザー58','user58','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ10','ユーザー59','user59','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ10','ユーザー60','user60','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ11-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ11','ユーザー61','user61','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ11','ユーザー62','user62','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ11','ユーザー63','user63','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ11','ユーザー64','user64','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ11','ユーザー65','user65','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ11','ユーザー66','user66','1000');
+
+#---------------------------------------------------------
+
+#ランキングテストデータ12-----------------------------------
+
+insert into picranking(rank, category, name, userid, score)
+	values('1','カテゴリ12','ユーザー67','user61','6000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('2','カテゴリ12','ユーザー68','user62','5000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('3','カテゴリ12','ユーザー69','user63','4000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('4','カテゴリ12','ユーザー70','user64','3000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('5','カテゴリ12','ユーザー71','user65','2000');
+
+insert into picranking(rank, category, name, userid, score)
+	values('6','カテゴリ12','ユーザー72','user66','1000');
+
+#---------------------------------------------------------
+
+insert into piccategory(num)
+	values('6');
+
+insert into piccategory(num)
+	values('12');
+
+insert into piccategory(num)
+	values('18');
+
+insert into piccategory(num)
+	values('24');
+
+insert into piccategory(num)
+	values('30');
+
+insert into piccategory(num)
+	values('36');

@@ -131,6 +131,23 @@
 <div id="people_space"></div>
 <img class="people_backcolor" src="<%=user != null ? user.getProfileBannerURL() : null%>"/>
 <img class="people_icon" src="<%=user != null ? user.getProfileImageURL() : null%>"/>
+
+                                            <div id="tes2">
+                                                <div id="profile_up_top2">ログインしてください。</div>
+                                                <div id="profile_up_back2"></div>
+                                            </div>
+
+                                            <div id="tes3">
+                                                <div id="profile_space">
+                                                    <div id="profile_backcolor"></div>
+                                                    <div id="login_font">ログインはこちら</div>
+                                                    <input type="submit" id="login_Button" value="LOGIN" />
+                                                    <p><a href="https://twitter.com/account/begin_password_reset" id="forgot_font">Forgot Twitter Account</a></p>
+                                                    <p><a id="forgot_font2">Ikitterを始めよう。</a></p>
+
+                                                </div>
+                                            </div>
+
 <%
 
     Context ctx = null;
@@ -182,6 +199,8 @@
         out.println("<p id=\"profile_up_rt\">   RT　　：" + rs.getInt("RT") + "点</p>");
         out.println("<p id=\"profile_up_rp\">   リプライ：" + rs.getInt("RP") + "点</p>");
         out.println("<p id=\"profile_up_other\">その他　：" + rs.getInt("other") + "点</p>");
+        out.println("<input id=\"profile_up_button\" type=\"button\" value=\"更新\" onclick=\"#\">");
+
 
 
     } catch (Exception e) {
@@ -225,8 +244,6 @@
 <!-------------カテゴリ選択画面------------------>
 
 
-<input id="profile_up_button" type="button" value="更新" onclick="#">
-</form>
 <main>
 </main>
 
@@ -326,6 +343,18 @@
     );
 </script>
 <!--フッダー用スクリプト-->
+
+                                                <!--ログイン判定-->
+                                                <script type="text/javascript">
+                                                    if (session.getAttribute("twitter") != null) {
+                                                        $('#tes2').hide();
+                                                        $('#tes3').hide();
+                                                    } else {
+
+                                                    }
+
+                                                </script>
+                                                <!--ログイン判定-->
 
 
 </body>
