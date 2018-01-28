@@ -133,7 +133,7 @@
 
             <a class="footer-dai" style="left: 470px;">お知らせ</a>
             <a href="info.jsp" class="link" style="top: 45px; left: 470px;">・Info</a>
-            <a href="#.html" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
+            <a href="http://gaiji4j.azurewebsites.net/" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
 
             <a class="footer-dai" style="left: 670px;">外部ツール</a>
             <a href="adutter.jsp" class="link" style="top: 45px; left: 670px;">・Adutter</a>

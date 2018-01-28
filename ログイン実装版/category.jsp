@@ -91,9 +91,10 @@
 <%
     request.setCharacterEncoding("UTF-8");
     String cname = request.getParameter("cname");
+    System.out.println(cname);
     String Aki = "TEST1";
     String username = "";
-    String userid = "";
+    String userid = "AAA";
     String category = "";
     String categoryArray[] = new String[5];
     int flag = 0;
@@ -104,6 +105,8 @@
         flag = -1;
     }
 
+    int tf= 0;
+    String ca ="";
     Context ctx = null;
     DataSource ds = null;
     Connection con = null;
@@ -115,11 +118,38 @@
     ResultSet rs2 = null;
     ResultSet rs3 = null;
 
+    ResultSet tu = null;
     try {
         ctx = new InitialContext();
         ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Ikitter");
         con = ds.getConnection();
 
+        /*ユーザー登録ｩｩｩｩｩ　後で改善します…*/
+        if (session.getAttribute("twitter") != null) {
+        strSql = "select * from user where userid = ?";
+        ps = con.prepareStatement(strSql);
+        ps.setString(1, user != null ? user.getScreenName() : null);
+        tu = ps.executeQuery();
+        while (tu.next()) {
+            ca = tu.getString("category");
+            tf = 1;
+        }
+
+        if(tf==0){
+          strSql = "insert into user(name, userid,category,score) values(?,?,'','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+
+          strSql = "insert into score(name,id,score,fabo,RT,RP,other) values(?,?,'0','0','0','0','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+        }
+      }
+         /*ここまで　*/
         strSql = "select * from category where name= ?";
         ps = con.prepareStatement(strSql);
         ps.setString(1, cname);
@@ -129,9 +159,10 @@
             flag = 1;
         }
 
+        if (session.getAttribute("twitter") != null) {
         strSql = "select * from user where name =?";
         ps2 = con.prepareStatement(strSql);
-        ps2.setString(1, Aki);
+        ps2.setString(1,user != null ? user.getName() : null);
         rs2 = ps2.executeQuery();
 
 
@@ -140,8 +171,7 @@
             userid = rs2.getString("userid");
             category = rs2.getString("category");
         }
-
-
+}
         strSql = "select * from category where name LIKE ?";
         ps3 = con.prepareStatement(strSql);
         ps3.setString(1, "%" + cname + "%");
@@ -162,6 +192,7 @@
             if (rs != null) rs.close();
             if (rs2 != null) rs2.close();
             if (rs3 != null) rs3.close();
+            if (tu != null) rs3.close();
             if (con != null) con.close();
             if (ps != null) ps.close();
             if (ps2 != null) ps2.close();
@@ -220,7 +251,7 @@
 <p id="people_id"><%=user != null ? user.getScreenName() : null%>
 </p>
 <hr id="people_hr">
-<p id="people_category">選択中のカテゴリ：Gaiji4J</p>
+<p id="people_category">選択中のカテゴリ：<% out.print(category); %></p>
 
 <% //そうでない場合
 } else { %>

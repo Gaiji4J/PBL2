@@ -135,7 +135,9 @@
 
 
 <%
-
+    int tf=0;
+    String ca = "";
+    String imgulr="";
     Context ctx = null;
     DataSource ds = null;
     Connection con = null;
@@ -145,17 +147,48 @@
     ResultSet rs = null;
     ResultSet rs2 = null;
 
+    ResultSet tu = null;
 
+    imgulr = user != null ? user.getProfileImageURL() : null; //何か出なかったんでとりあえず変数に画像URL入れてます...
     try {
+
         ctx = new InitialContext();
         ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Ikitter");
         con = ds.getConnection();
 
-        strSql = "select * from score where id='ABC'";
+        /*ユーザー登録ｩｩｩｩｩ　後で改善します…*/
+        if (session.getAttribute("twitter") != null) {
+        strSql = "select * from user where userid = ?";
+        ps = con.prepareStatement(strSql);
+        ps.setString(1, user != null ? user.getScreenName() : null);
+        tu = ps.executeQuery();
+        while (tu.next()) {
+            ca = tu.getString("category");
+            tf = 1;
+        }
+
+        if(tf==0){
+          strSql = "insert into user(name, userid,category,score) values(?,?,'','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+
+          strSql = "insert into score(name,id,score,fabo,RT,RP,other) values(?,?,'0','0','0','0','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+        }
+      }
+         /*ここまで　*/
+
+
+        strSql = "select * from score where id='tk3032'";
         ps = con.prepareStatement(strSql);
         rs = ps.executeQuery();
 
-        strSql = "select * from user where userid='ABC'";
+        strSql = "select * from user where userid='tk3032'";
         ps2 = con.prepareStatement(strSql);
         rs2 = ps2.executeQuery();
 
@@ -174,18 +207,18 @@
 
         out.println("<div id=\"profile_up_top\">プロフィール更新</div>");
         out.println("<div id=\"profile_up_back\"></div>");
-        out.println("<img class=\"profile_up_icon\" src=\"image/ico.jpg\" />");
+        out.println("<img class=\"profile_up_icon\" src=\"" + imgulr + "\"  />");
         out.println("<p id=\"profile_up_name\">" + rs.getString("name") + "</p>");
         out.println("<p id=\"profile_up_id\">" + rs.getString("name") + "</p>");
         out.println("<hr id=\"profile_up_hr\">");
         out.println("<p id=\"profile_up_category\">カテゴリ「" + rs2.getString("category") + "」</p>");
-        out.println("<p id=\"profile_up_score\">スコア:" + "10000000" + "点</p>");
+        out.println("<p id=\"profile_up_score\">スコア:" + rs.getInt("score") + "点</p>");
         out.println("<hr id=\"profile_up_hr2\">");
         out.println("<p id=\"profile_up_fav\">  ファボ　：" + rs.getInt("fabo") + "点</p>");
         out.println("<p id=\"profile_up_rt\">   RT　　：" + rs.getInt("RT") + "点</p>");
         out.println("<p id=\"profile_up_rp\">   リプライ：" + rs.getInt("RP") + "点</p>");
         out.println("<p id=\"profile_up_other\">その他　：" + rs.getInt("other") + "点</p>");
-        out.println("<input id=\"profile_up_button\" type=\"button\" value=\"更新\" onclick=\"#\">");
+        out.println("<a href=\"updatescore.jsp\"><input id=\"profile_up_button\" type=\"button\" value=\"更新\" onclick=\"#\"></a>");
 
 
 
@@ -196,6 +229,7 @@
         try {
             if (rs != null) rs.close();
             if (rs2 != null) rs2.close();
+            if (tu != null) tu.close();
             if (con != null) con.close();
             if (ps != null) ps.close();
             if (ps2 != null) ps2.close();
@@ -266,7 +300,7 @@
 
         <a class="footer-dai" style="left: 470px;">お知らせ</a>
         <a href="info.jsp" class="link" style="top: 45px; left: 470px;">・Info</a>
-        <a href="#.jsp" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
+        <a href="http://gaiji4j.azurewebsites.net/" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
 
         <a class="footer-dai" style="left: 670px;">外部ツール</a>
         <a href="adutter.jsp" class="link" style="top: 45px; left: 670px;">・Adutter</a>

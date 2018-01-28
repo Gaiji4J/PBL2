@@ -22,7 +22,7 @@ create table user(
 
 create table category(
 	name		varchar(100),
-	id			varchar(100),
+	id			int auto_increment primary key,
 	score		int,
 	num			int
 );
@@ -123,6 +123,24 @@ insert into category(name)
 insert into category(name)
 	values('Gaiji4j');
 
+insert into category(name)
+	values('動物');
+
+insert into category(name)
+	values('神戸電子');
+
+insert into category(name)
+	values('音楽');
+
+insert into category(name)
+	values('Twitter');
+
+insert into category(name)
+	values('YouTubeｒ');
+
+insert into category(name)
+	values('ソシャゲ');
+
 #home.jsp表示用のテストデータ
 #使いませんでした。ごめん。
 insert into ranking(rank,userid,score,category)
@@ -165,66 +183,66 @@ insert into ranking(rank,userid,score,category)
 #ランキングテストデータ１----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ1','ユーザー1','user1','6000');
+	values('1','Gaiji4J','秋色紅茶','akiirokoutya','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ1','ユーザー2','user2','5000');
+	values('2','Gaiji4J','あづ','MikuruAndAdu','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ1','ユーザー3','user3','4000');
+	values('3','Gaiji4J','さんぜろ','tk3032','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ1','ユーザー4','user4','3000');
+	values('4','Gaiji4J','ふぁぶ','fbr_z','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ1','ユーザー5','user5','2000');
+	values('5','Gaiji4J','でぃーん','bravebird1012','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ1','ユーザー6','user6','1000');
+	values('6','Gaiji4J','神','AduZeus9yo','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ２-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ2','ユーザー7','user7','6000');
+	values('1','アニメ','ユーザー7','user7','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ2','ユーザー8','user8','5000');
+	values('2','アニメ','ユーザー8','user8','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ2','ユーザー9','user9','4000');
+	values('3','アニメ','ユーザー9','user9','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ2','ユーザー10','user10','3000');
+	values('4','アニメ','ユーザー10','user10','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ2','ユーザー11','user11','2000');
+	values('5','アニメ','ユーザー11','user11','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ2','ユーザー12','user12','1000');
+	values('6','アニメ','ユーザー12','user12','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ３-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ3','ユーザー13','user13','6000');
+	values('1','フレンズ','ユーザー13','user13','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ3','ユーザー14','user14','5000');
+	values('2','フレンズ','ユーザー14','user14','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ3','ユーザー15','user15','4000');
+	values('3','フレンズ','ユーザー15','user15','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ3','ユーザー16','user16','3000');
+	values('4','フレンズ','ユーザー16','user16','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ3','ユーザー17','user17','2000');
+	values('5','フレンズ','ユーザー17','user17','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ3','ユーザー18','user18','1000');
+	values('6','フレンズ','ユーザー18','user18','1000');
 
 
 #---------------------------------------------------------
@@ -232,198 +250,198 @@ insert into picranking(rank, category, name, userid, score)
 #ランキングテストデータ４-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ4','ユーザー19','user19','6000');
+	values('1','神戸電子','ユーザー19','user19','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ4','ユーザー20','user20','5000');
+	values('2','神戸電子','ユーザー20','user20','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ4','ユーザー21','user21','4000');
+	values('3','神戸電子','ユーザー21','user21','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ4','ユーザー22','user22','3000');
+	values('4','神戸電子','ユーザー22','user22','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ4','ユーザー23','user23','2000');
+	values('5','神戸電子','ユーザー23','user23','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ4','ユーザー24','user24','1000');
+	values('6','神戸電子','ユーザー24','user24','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ５-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ5','ユーザー25','user25','6000');
+	values('1','音楽','ユーザー25','user25','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ5','ユーザー26','user26','5000');
+	values('2','音楽','ユーザー26','user26','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ5','ユーザー27','user27','4000');
+	values('3','音楽','ユーザー27','user27','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ5','ユーザー28','user28','3000');
+	values('4','音楽','ユーザー28','user28','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ5','ユーザー29','user29','2000');
+	values('5','音楽','ユーザー29','user29','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ5','ユーザー30','user30','1000');
+	values('6','音楽','ユーザー30','user30','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ６-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ6','ユーザー31','user31','6000');
+	values('1','格ゲー','ユーザー31','user31','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ6','ユーザー32','user32','5000');
+	values('2','格ゲー','ユーザー32','user32','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ6','ユーザー33','user33','4000');
+	values('3','格ゲー','ユーザー33','user33','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ6','ユーザー34','user34','3000');
+	values('4','格ゲー','ユーザー34','user34','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ6','ユーザー35','user35','2000');
+	values('5','格ゲー','ユーザー35','user35','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ6','ユーザー36','user36','1000');
+	values('6','格ゲー','ユーザー36','user36','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ7-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ7','ユーザー37','user37','6000');
+	values('1','音ゲー','ユーザー37','user37','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ7','ユーザー38','user38','5000');
+	values('2','音ゲー','ユーザー38','user38','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ7','ユーザー39','user39','4000');
+	values('3','音ゲー','ユーザー39','user39','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ7','ユーザー40','user40','3000');
+	values('4','音ゲー','ユーザー40','user40','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ7','ユーザー41','user41','2000');
+	values('5','音ゲー','ユーザー41','user41','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ7','ユーザー42','user42','1000');
+	values('6','音ゲー','ユーザー42','user42','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ8-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ8','ユーザー43','user43','6000');
+	values('1','Twitter','ユーザー43','user43','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ8','ユーザー44','user44','5000');
+	values('2','Twitter','ユーザー44','user44','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ8','ユーザー45','user45','4000');
+	values('3','Twitter','ユーザー45','user45','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ8','ユーザー46','user46','3000');
+	values('4','Twitter','ユーザー46','user46','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ8','ユーザー47','user47','2000');
+	values('5','Twitter','ユーザー47','user47','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ8','ユーザー48','user48','1000');
+	values('6','Twitter','ユーザー48','user48','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ9-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ9','ユーザー49','user49','6000');
+	values('1','スポーツ','ユーザー49','user49','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ9','ユーザー50','user50','5000');
+	values('2','スポーツ','ユーザー50','user50','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ9','ユーザー51','user51','4000');
+	values('3','スポーツ','ユーザー51','user51','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ9','ユーザー52','user52','3000');
+	values('4','スポーツ','ユーザー52','user52','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ9','ユーザー53','user53','2000');
+	values('5','スポーツ','ユーザー53','user53','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ9','ユーザー54','user54','1000');
+	values('6','スポーツ','ユーザー54','user54','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ10-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ10','ユーザー55','user55','6000');
+	values('1','動物','ユーザー55','user55','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ10','ユーザー56','user56','5000');
+	values('2','動物','ユーザー56','user56','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ10','ユーザー57','user57','4000');
+	values('3','動物','ユーザー57','user57','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ10','ユーザー58','user58','3000');
+	values('4','動物','ユーザー58','user58','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ10','ユーザー59','user59','2000');
+	values('5','動物','ユーザー59','user59','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ10','ユーザー60','user60','1000');
+	values('6','動物','ユーザー60','user60','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ11-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ11','ユーザー61','user61','6000');
+	values('1','YouTubeｒ','ユーザー61','user61','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ11','ユーザー62','user62','5000');
+	values('2','YouTubeｒ','ユーザー62','user62','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ11','ユーザー63','user63','4000');
+	values('3','YouTubeｒ','ユーザー63','user63','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ11','ユーザー64','user64','3000');
+	values('4','YouTubeｒ','ユーザー64','user64','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ11','ユーザー65','user65','2000');
+	values('5','YouTubeｒ','ユーザー65','user65','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ11','ユーザー66','user66','1000');
+	values('6','YouTubeｒ','ユーザー66','user66','1000');
 
 #---------------------------------------------------------
 
 #ランキングテストデータ12-----------------------------------
 
 insert into picranking(rank, category, name, userid, score)
-	values('1','カテゴリ12','ユーザー67','user61','6000');
+	values('1','ソシャゲ','ユーザー67','user61','6000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('2','カテゴリ12','ユーザー68','user62','5000');
+	values('2','ソシャゲ','ユーザー68','user62','5000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('3','カテゴリ12','ユーザー69','user63','4000');
+	values('3','ソシャゲ','ユーザー69','user63','4000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('4','カテゴリ12','ユーザー70','user64','3000');
+	values('4','ソシャゲ','ユーザー70','user64','3000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('5','カテゴリ12','ユーザー71','user65','2000');
+	values('5','ソシャゲ2','ユーザー71','user65','2000');
 
 insert into picranking(rank, category, name, userid, score)
-	values('6','カテゴリ12','ユーザー72','user66','1000');
+	values('6','ソシャゲ','ユーザー72','user66','1000');
 
 #---------------------------------------------------------
 
@@ -444,3 +462,21 @@ insert into piccategory(num)
 
 insert into piccategory(num)
 	values('36');
+
+insert into piccategory(num)
+	values('42');
+
+insert into piccategory(num)
+	values('48');
+
+insert into piccategory(num)
+	values('54');
+
+insert into piccategory(num)
+	values('60');
+
+insert into piccategory(num)
+	values('66');
+
+insert into piccategory(num)
+	values('72');

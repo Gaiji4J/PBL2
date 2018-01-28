@@ -1,3 +1,10 @@
+<%@ page import="javax.naming.Context" %>
+<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.sql.DataSource" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+
 <%@ page contentType="text/html" pageEncoding="UTF-8" import="oauth.signpost.*,twitter4j.*" %>
 <%@ page import="twitter4j.auth.AccessToken" %>
 <%@ page import="oauth.signpost.exception.OAuthMessageSignerException" %>
@@ -78,7 +85,64 @@
             e.printStackTrace();
         }
     }
+    int tf=0;
+    String ca="";
+    Context ctx = null;
+    DataSource ds = null;
+    Connection con = null;
+    String strSql = null;
+    PreparedStatement ps = null;
+    ResultSet tu = null;
+
+    try {
+
+        ctx = new InitialContext();
+        ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Ikitter");
+        con = ds.getConnection();
+
+        /*ユーザー登録ｩｩｩｩｩ　後で改善します…*/
+        if (session.getAttribute("twitter") != null) {
+        strSql = "select * from user where userid = ?";
+        ps = con.prepareStatement(strSql);
+        ps.setString(1, user != null ? user.getScreenName() : null);
+        tu = ps.executeQuery();
+        while (tu.next()) {
+            ca = tu.getString("category");
+            tf = 1;
+        }
+
+        if(tf==0){
+          strSql = "insert into user(name, userid,category,score) values(?,?,'','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+
+          strSql = "insert into score(name,id,score,fabo,RT,RP,other) values(?,?,'0','0','0','0','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+        }
+      }
+         /*ここまで　*/
+
+       } catch (Exception e) {
+           out.println("try block : " + e.getMessage());
+           e.printStackTrace();
+       } finally {
+           try {
+               if (tu != null) tu.close();
+               if (con != null) con.close();
+               if (ps != null) ps.close();
+           } catch (Exception e) {
+               System.out.println("finally block : " + e.getMessage());
+               e.printStackTrace();
+           }
+       }
+
 %>
+
 <html lang="ja">
 
 <head>
@@ -126,7 +190,7 @@
 
             <a class="footer-dai" style="left: 470px;">お知らせ</a>
             <a href="info.jsp" class="link" style="top: 45px; left: 470px;">・Info</a>
-            <a href="#.jsp" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
+            <a href="http://gaiji4j.azurewebsites.net/" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
 
             <a class="footer-dai" style="left: 670px;">外部ツール</a>
             <a href="adutter.jsp" class="link" style="top: 45px; left: 670px;">・Adutter</a>

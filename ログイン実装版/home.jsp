@@ -111,7 +111,8 @@
     out.println("var Categorylist = [];");
     out.println("var Category2 = [];");
 
-
+    int tf=0;
+    String ca= "";
     Context ctx = null;
     DataSource ds = null;
     Connection con = null;
@@ -123,6 +124,7 @@
     PreparedStatement ps3 = null;
     ResultSet rs3 = null;
 
+    ResultSet tu = null;
 
     int count = 1;
     int i = 0;
@@ -131,6 +133,38 @@
         ctx = new InitialContext();
         ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Ikitter");
         con = ds.getConnection();
+
+        /*ユーザー登録ｩｩｩｩｩ　後で改善します…*/
+        if (session.getAttribute("twitter") != null) {
+        strSql = "select * from user where userid = ?";
+        ps = con.prepareStatement(strSql);
+        ps.setString(1, user != null ? user.getScreenName() : null);
+        tu = ps.executeQuery();
+        while (tu.next()) {
+            ca = tu.getString("category");
+            tf = 1;
+        }
+
+        if(tf==0){
+          strSql = "insert into user(name, userid,category,score) values(?,?,'','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+
+          strSql = "insert into score(name,id,score,fabo,RT,RP,other) values(?,?,'0','0','0','0','0')";
+          ps = con.prepareStatement(strSql);
+          ps.setString(1, user != null ? user.getName() : null);
+          ps.setString(2, user != null ? user.getScreenName() : null);
+          ps.executeUpdate();
+
+        }
+      }
+
+
+
+         /*ここまで　*/
+
         strSql = "select * from picranking";
         ps = con.prepareStatement(strSql);
         rs = ps.executeQuery();
@@ -174,6 +208,7 @@
             if (rs != null) rs.close();
             if (rs2 != null) rs2.close();
             if (rs3 != null) rs3.close();
+            if (tu != null) tu.close();
             if (con != null) con.close();
             if (ps != null) ps.close();
             if (ps2 != null) ps2.close();
@@ -225,7 +260,7 @@
 <p id="people_id"><%=user != null ? user.getScreenName() : null%>
 </p>
 <hr id="people_hr">
-<p id="people_category">選択中のカテゴリ：Gaiji4J</p>
+<p id="people_category">選択中のカテゴリ：<% out.print(ca); %></p>
 
 <% //そうでない場合
 } else { %>
@@ -456,7 +491,7 @@
 
         <a class="footer-dai" style="left: 470px;">お知らせ</a>
         <a href="info.jsp" class="link" style="top: 45px; left: 470px;">・Info</a>
-        <a href="#.jsp" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
+        <a href="http://gaiji4j.azurewebsites.net/" class="link" style="top: 85px; left: 470px;">・開発Blog</a>
 
         <a class="footer-dai" style="left: 670px;">外部ツール</a>
         <a href="adutter.jsp" class="link" style="top: 45px; left: 670px;">・Adutter</a>
@@ -563,8 +598,8 @@
 </ul>
 <!--スクリプト ページ表示-->
 <script type="text/javascript">
-    $(function () {
-        $('.li_ward').click(function () {
+    $(function() {
+        $('.li_ward').click(function() {
             var index = $(this).index();
             var ui_ward = $('ul#nav').find('.li' + index).text();
             alert('要素:' + index + '番目' + ui_ward + 'ワード' + Text);
@@ -685,7 +720,7 @@
                     }
                 }
                 $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
-                alert(Math.floor(end / 2));
+                alert(Math.floor(end / 2));　　
                 /*-----------------------------------------------------------------------------------------------------------------*/
             } else if (ui_ward == '人数') {
                 alert('人数で表示しろks');
@@ -725,7 +760,7 @@
                 alert(Math.floor(end / 2));
                 /*--------------------------------------------------------------------------------------------------------------------*/
             }
-            $(".free_title").jsp('カテゴリ一覧：' + ui_ward);
+            $(".free_title").html('カテゴリ一覧：' + ui_ward);
             $('.us').css('z-index', -2);
             $('#underspace' + index).css('z-index', 5);
 

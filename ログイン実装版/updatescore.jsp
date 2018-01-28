@@ -170,4 +170,7 @@
             e.printStackTrace( );
             }
         }
+
+        String url = "profile.jsp";
+        response.sendRedirect(url);
 %>
