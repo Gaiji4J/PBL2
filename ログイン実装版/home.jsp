@@ -602,12 +602,10 @@
         $('.li_ward').click(function() {
             var index = $(this).index();
             var ui_ward = $('ul#nav').find('.li' + index).text();
-            alert('要素:' + index + '番目' + ui_ward + 'ワード' + Text);
             var title_switch = $(".free_title").text();
             $('.us').css('height', 200 + 'px');
             /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓新着処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
             if (ui_ward == '新着') {
-                alert('新着順で表示しろ');
                 $('body').append('<div id="underspace1" class="us"></div>');
                 var search_list = new Array();
                 /* 小谷くんが追加したときにこの間のコードはコメント化して
@@ -624,7 +622,6 @@
                 search_list.push('てすと２');
                 alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
                 /* 小谷くんが追加したときにこの間のコードはコメント化して */
-                alert(Category2.length);
                 var end = Category2.length;
                 var sc = 0;
                 var ssc = 0;
@@ -640,9 +637,7 @@
                     }
                 }
                 $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
-                alert(Math.floor(end / 2));
             } else if (ui_ward == '古参') {
-                alert('古参順で表示しろ');
                 $('body').append('<div id="underspace2" class="us"></div>');
 
                 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓古参処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
@@ -661,7 +656,6 @@
                 search_list.push('てすと２');
                 alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
                 /* 小谷くんが追加したときにこの間のコードはコメント化して */
-                alert(Category2.length);
                 var end = Category2.length;
                 var sc = 0;
                 var ssc = 0;
@@ -677,11 +671,9 @@
                     }
                 }
                 $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
-                alert(Math.floor(end / 2));
 
                 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ランダム処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
             } else if (ui_ward == 'ランダム') {
-                alert('ランダムで表示しろ');
                 $('body').append('<div id="underspace3" class="us"></div>');
                 var search_list = new Array();
                 /* 小谷くんが追加したときにこの間のコードはコメント化して
@@ -704,7 +696,6 @@
                     search_list[r] = tmp;
                 }
                 /* 小谷くんが追加したときにこの間のコードはコメント化して */
-                alert(Category2.length);
                 var end = Category2.length;
                 var sc = 0;
                 var ssc = 0;
@@ -719,11 +710,9 @@
                         sc++;
                     }
                 }
-                $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
-                alert(Math.floor(end / 2));　　
+                $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');　　
                 /*-----------------------------------------------------------------------------------------------------------------*/
             } else if (ui_ward == '人数') {
-                alert('人数で表示しろks');
                 $('body').append('<div id="underspace4" class="us"></div>');
                 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓人数処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
                 var search_list = new Array();
@@ -741,7 +730,6 @@
                 search_list.push('てすと２');
                 alert('xxxxxxxxxxxxxxxxxxxxxxxxxxxx');
                 /* 小谷くんが追加したときにこの間のコードはコメント化して */
-                alert(Category2.length);
                 var end = Category2.length;
                 var sc = 0;
                 var ssc = 0;
@@ -757,7 +745,6 @@
                     }
                 }
                 $('.us').css('height', 30 + ((sc - ssc) * 35) + 'px');
-                alert(Math.floor(end / 2));
                 /*--------------------------------------------------------------------------------------------------------------------*/
             }
             $(".free_title").html('カテゴリ一覧：' + ui_ward);
