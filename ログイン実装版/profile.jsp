@@ -184,12 +184,14 @@
          /*ここまで　*/
 
 
-        strSql = "select * from score where id='tk3032'";
+        strSql = "select * from score where id=?";
         ps = con.prepareStatement(strSql);
+        ps.setString(1, user != null ? user.getScreenName() : null);
         rs = ps.executeQuery();
 
-        strSql = "select * from user where userid='tk3032'";
+        strSql = "select * from user where userid=?";
         ps2 = con.prepareStatement(strSql);
+        ps2.setString(1, user != null ? user.getScreenName() : null);
         rs2 = ps2.executeQuery();
 
 
